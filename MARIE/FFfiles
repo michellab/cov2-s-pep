@@ -1,0 +1,19 @@
+Forces Field files for gromacs 
+
+Include :
+
+1. General Amberforcefield99SB-ILDN for gromacs
+
+2. Force Field Files from PMX for mutagenesis
+
+3. Custom made files for Staples (Marie)
+
+4. Force Field Files from XXX for dyes (to come...)
+
+!!!!!!!!!!!!!!!!!!!!!
+A copy of this folder should be present on the the server and its PATH should be exported as 
+
+export GMXLIB=$PATH/Stapline
+
+Otherwise compilations of the .tpr files will fail
+!!!!!!!!!!!!!!!!!!!!!!!!!!
