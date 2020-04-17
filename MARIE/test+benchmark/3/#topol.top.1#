@@ -1,0 +1,53 @@
+;
+;	File 'topol.top' was generated
+;	By user: marie (1000)
+;	On host: Mosura
+;	At date: Thu Apr 16 23:46:20 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                     :-) GROMACS - gmx pdb2gmx, 2020 (-:
+;	
+;	Executable:   /usr/local/gromacs/bin/gmx
+;	Data prefix:  /usr/local/gromacs
+;	Working dir:  /home/marie/covid-19/benchmark3
+;	Command line:
+;	  gmx pdb2gmx -f m0j_refine_14_truncated.pdb -o gmx-3_conf1.pdb -ter -water tip3p -ignh
+;	Force field data was read from:
+;	/home/marie/Utilities/gromacs-2020/pmx/data/mutff45
+;
+;	Note:
+;	This might be a non-standard force field location. When you use this topology, the
+;	force field must either be present in the current directory, or the location
+;	specified in the GMXLIB path variable or with the 'include' mdp file option.
+;
+
+; Include forcefield parameters
+#include "amber99sbmut.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_E.itp"
+
+; Include water topology
+#include "amber99sbmut.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "amber99sbmut.ff/ions.itp"
+
+[ system ]
+; Name
+Protein
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_E     1
