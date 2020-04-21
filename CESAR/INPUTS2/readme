@@ -1,5 +1,5 @@
 
 Second parametrization, it is working fine, seems is stable. Main difference with the previous one is
-this doesnt have a molecule of water. However durign the simulations the hidratacion of the ion mimics
-the complex with water (encougaring). The complex alrady has glycans as in the pdb. Already minmized with
+this doesnt have a molecule of water. However during simulations the hidratation of the ion mimics
+the complex with water (encougaring). The complex already has glycans as in the pdb. Already minmized with
 sander. Ready to go for MD production
