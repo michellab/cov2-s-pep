@@ -2,28 +2,28 @@
  
 ####### BEGIN-CHANGEME
 source /usr/local/gromacs/bin/GMXRC
-export GMXLIB=/home/marie/cov2-s-pep/MARIE/FFfiles/
+export GMXLIB=/home/marie/GIT_COVID19/cov2-s-pep/MARIE/FFfiles/
 ####### END-CHANGEME
 
 ####Minimisation 
-gmx -quiet grompp -f min -c  input.pdb -p  topol.top -maxwarn 1  -o  topol.tpr
-gmx -quiet  mdrun -gpu_id $1 -v -c em.pdb ;
+gmx -quiet grompp -f min -c  input.pdb -p  topol.top -maxwarn 1  -o  min.tpr
+gmx -quiet  mdrun -s min.tpr -gpu_id 0 -v -c em.pdb ;
 
 ###equilibration 1 NVT
-gmx -quiet grompp -f eq.mdp -c em.pdb -p topol.top -o eq.tpr  -maxwarn 1 ;
-gmx -quiet mdrun -gpu_id $1 -s eq.tpr -v -nt 2 -nice 0 -c eq.gro  -ntmpi 1;
+gmx -quiet grompp -f eq.mdp -c em.pdb -p topol.top -o eq.tpr  -maxwarn 1 -r em.pdb ;
+gmx -quiet mdrun -gpu_id 0 -s eq.tpr -v -nt 2 -nice 0 -c eq.gro  -ntmpi 1;
 
 if test -f eq.gro ; then echo "So far so good..."; else echo "Need a more gentle equilibration " ; gmx grompp -f eq-1fs.mdp -c em.pdb -p topol.top -o eq-1fs.tpr ; gmx mdrun -s eq-1fs.tpr -v -nt 2 -nice 0 -c eq.gro  -ntmpi 1; gmx grompp -f eq.mdp -c em.pdb -p topol.top -o eq.tpr ; gmx mdrun -s eq.tpr -v -nt 2 -nice 0 -c eq.gro  -ntmpi 1;  fi
 
 ###equilibration 2 NVT
-gmx -quiet grompp -f equi.mdp -c eq.gro -p topol.top -o eq.tpr -maxwarn 1 ;
-gmx -quiet mdrun -gpu_id $1 -s eq.tpr -v -nt 2 -nice 0 -c equi1.gro  -ntmpi 1;
+gmx -quiet grompp -f eq1.mdp -c eq.gro -p topol.top -o eq.tpr -maxwarn 1 -r em.pdb;
+gmx -quiet mdrun -gpu_id 0 -s eq.tpr -v -nt 2 -nice 0 -c equi1.gro  -ntmpi 1;
 
 ###equilibration 3 NPT
-gmx -quiet grompp -f equi2.mdp -c equi1.gro -p topol.top -o eq.tpr -maxwarn 1 ;
-gmx -quiet mdrun -gpu_id $1 -s eq.tpr -v -nt 2 -nice 0 -c equi2.gro  -ntmpi 1;
+gmx -quiet grompp -f eq2.mdp -c equi1.gro -p topol.top -o eq.tpr -maxwarn 1 -r em.pdb;
+gmx -quiet mdrun -gpu_id 0 -s eq.tpr -v -nt 2 -nice 0 -c equi2.gro  -ntmpi 1;
 
 ###Production 40 ps 
-gmx -quiet grompp -f prod_test.mdp -c eq.gro -p topol.top -o md.tpr  -maxwarn 1;
-gmx -quiet mdrun -gpu_id $1 -s md.tpr -v -nt 2 -nice 0 -c md.gro -ntmpi 1;
+gmx -quiet grompp -f prod_test.mdp -c eq.gro -p topol.top -o md.tpr  -maxwarn 1  -r em.pdb;
+gmx -quiet mdrun -gpu_id 0 -s md.tpr -v -nt 2 -nice 0 -c md.gro -ntmpi 1;
 

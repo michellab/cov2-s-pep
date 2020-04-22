@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: marie (1000)
 ;	On host: Mosura
-;	At date: Thu Apr 16 12:30:09 2020
+;	At date: Wed Apr 22 14:00:32 2020
 ;
 ;	Created by:
 ;	                      :-) GROMACS - gmx grompp, 2020 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr/local/gromacs
 ;	Working dir:  /home/marie/GIT_COVID19/cov2-s-pep/MARIE/test+benchmark/2
 ;	Command line:
-;	  gmx -quiet grompp -f min -c input.pdb -p topol.top -maxwarn 1 -o topol.tpr
+;	  gmx -quiet grompp -f min -c input.pdb -p topol.top -maxwarn 1 -o min.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
