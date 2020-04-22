@@ -3,7 +3,7 @@
 source /usr/local/gromacs/bin/GMXRC
 #export GMXLIB=/home/marie/cov2-s-pep/MARIE/FFfiles/
 ####### END-CHANGEME
-gpu=1
+gpu=0
 echo "Using GPU id 1. Change the variable gpu to a diffrerent id if required"
 
 ####Minimisation
