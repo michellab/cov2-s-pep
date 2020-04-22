@@ -1,0 +1,45 @@
+
+Back Off! I just backed up md.log to ./#md.log.1#
+Reading file md.tpr, VERSION 2019 (single precision)
+Changing nstlist from 10 to 100, rlist from 1 to 1.157
+
+Using 1 MPI thread
+Using 2 OpenMP threads 
+
+1 GPU auto-selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:1,PME:1
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PME tasks will do all aspects on the GPU
+
+NOTE: The number of threads is not equal to the number of (logical) cores
+      and the -pin option is set to auto: will not pin threads to cores.
+      This can lead to significant performance degradation.
+      Consider using -pin on (and -pinoffset in case you run multiple jobs).
+
+Back Off! I just backed up traj.trr to ./#traj.trr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Protein in water'
+5000 steps,     10.0 ps.
+step  200: timed with pme grid 60 60 60, coulomb cutoff 1.000: 498.8 M-cycles
+step  400: timed with pme grid 52 52 52, coulomb cutoff 1.091: 526.2 M-cycles
+step  600: timed with pme grid 48 48 48, coulomb cutoff 1.182: 554.2 M-cycles
+step  800: timed with pme grid 44 44 44, coulomb cutoff 1.289: 623.3 M-cycles
+step 1000: timed with pme grid 48 48 48, coulomb cutoff 1.182: 557.3 M-cycles
+step 1200: timed with pme grid 52 52 52, coulomb cutoff 1.091: 530.5 M-cycles
+step 1400: timed with pme grid 56 56 56, coulomb cutoff 1.013: 486.6 M-cycles
+step 1600: timed with pme grid 60 60 60, coulomb cutoff 1.000: 483.9 M-cycles
+step 1800: timed with pme grid 52 52 52, coulomb cutoff 1.091: 535.1 M-cycles
+step 2000: timed with pme grid 56 56 56, coulomb cutoff 1.013: 486.5 M-cycles
+step 2200: timed with pme grid 60 60 60, coulomb cutoff 1.000: 484.2 M-cycles
+              optimal pme grid 60 60 60, coulomb cutoff 1.000
+step 2300, remaining wall clock time:     5 s          step 2400, remaining wall clock time:     5 s          step 2500, remaining wall clock time:     5 s          step 2600, remaining wall clock time:     5 s          step 2700, remaining wall clock time:     4 s          step 2800, remaining wall clock time:     4 s          step 2900, remaining wall clock time:     4 s          step 3000, remaining wall clock time:     4 s          step 3100, remaining wall clock time:     3 s          step 3200, remaining wall clock time:     3 s          step 3300, remaining wall clock time:     3 s          step 3400, remaining wall clock time:     3 s          step 3500, remaining wall clock time:     2 s          step 3600, remaining wall clock time:     2 s          step 3700, remaining wall clock time:     2 s          step 3800, remaining wall clock time:     2 s          step 3900, remaining wall clock time:     2 s          step 4000, remaining wall clock time:     1 s          step 4100, remaining wall clock time:     1 s          step 4200, remaining wall clock time:     1 s          step 4300, remaining wall clock time:     1 s          step 4400, remaining wall clock time:     1 s          step 4500, remaining wall clock time:     0 s          step 4600, remaining wall clock time:     0 s          step 4700, remaining wall clock time:     0 s          step 4800, remaining wall clock time:     0 s          step 4900, remaining wall clock time:     0 s          
+Writing final coordinates.
+
+Back Off! I just backed up shelix.npt.gro to ./#shelix.npt.gro.1#
+step 5000, remaining wall clock time:     0 s          
+               Core t (s)   Wall t (s)        (%)
+       Time:       18.295        9.147      200.0
+                 (ns/day)    (hour/ns)
+Performance:       94.471        0.254

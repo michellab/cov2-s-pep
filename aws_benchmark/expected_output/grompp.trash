@@ -1,0 +1,36 @@
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 449797090
+Generated 2145 of the 2145 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 2145 of the 2145 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+Excluding 3 bonded neighbours molecule type 'Protein_chain_E'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 1 bonded neighbours molecule type 'NA'
+Setting gen_seed to 1196860686
+Velocities were taken from a Maxwell distribution at 300 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group Protein is 8477.78
+Number of degrees of freedom in T-Coupling group non-Protein is 107763.22
+Estimate for the relative computational load of the PME mesh part: 0.30
+
+Back Off! I just backed up md.tpr to ./#md.tpr.1#
+turning H bonds into constraints...
+turning H bonds into constraints...
+turning H bonds into constraints...
+turning H bonds into constraints...
+Analysing residue names:
+There are:   220    Protein residues
+There are: 17960      Water residues
+There are:     2        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.035 nm, buffer size 0.035 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.000 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 60x60x60, spacing 0.151 0.151 0.151
+This run will generate roughly 8 Mb of data
