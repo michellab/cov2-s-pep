@@ -1,0 +1,47 @@
+;
+;	File 'helix.top' was generated
+;	By user: sllabres (501)
+;	On host: S4A-Q177HV29
+;	At date: Wed Apr 22 10:52:25 2020
+;
+;	This is a standalone topology file
+;
+;	It was generated using program:
+;	pdb2gmx - VERSION 4.6.5
+;
+;	Command line was:
+;	pdb2gmx -f chunk.6m0j.pdb -o helix.gro -p helix.top -i helix.posre.itp -n helix.ndx -ignh -ss 
+;
+;	Force field was read from the standard Gromacs share directory.
+;
+
+; Include forcefield parameters
+#include "amber99sb-ildn.ff/forcefield.itp"
+
+; Include chain topologies
+#include "helix_Protein_chain_A.itp"
+#include "helix_Protein_chain_E.itp"
+
+; Include water topology
+#include "amber99sb-ildn.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "amber99sb-ildn.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_E     1
+SOL         22679
+NA               2
