@@ -1,5 +1,5 @@
 Ignoring obsolete mdp entry 'title'
-Setting the LD random seed to 1163242669
+Setting the LD random seed to -177284657
 Generated 2145 of the 2145 non-bonded parameter combinations
 Generating 1-4 interactions: fudge = 0.5
 Generated 2145 of the 2145 1-4 parameter combinations
@@ -9,12 +9,12 @@ Excluding 2 bonded neighbours molecule type 'SOL'
 Excluding 2 bonded neighbours molecule type 'SOL'
 Excluding 2 bonded neighbours molecule type 'SOL'
 Excluding 1 bonded neighbours molecule type 'NA'
-Setting gen_seed to 265486
+Setting gen_seed to -644569944
 Velocities were taken from a Maxwell distribution at 300 K
 Removing all charge groups because cutoff-scheme=Verlet
 Number of degrees of freedom in T-Coupling group Protein is 8477.78
 Number of degrees of freedom in T-Coupling group non-Protein is 107763.22
-Estimate for the relative computational load of the PME mesh part: 0.30
+Estimate for the relative computational load of the PME mesh part: 0.23
 turning H bonds into constraints...
 turning H bonds into constraints...
 turning H bonds into constraints...

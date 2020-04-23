@@ -2,7 +2,7 @@
  
 ####### BEGIN-CHANGEME
 source /usr/local/gromacs/bin/GMXRC
-export GMXLIB=/home/marie/GIT_COVID19/cov2-s-pep/MARIE/FFfiles/
+export GMXLIB=/home/ubuntu/cov2-s-pep/MARIE/FFfiles/
 ####### END-CHANGEME
 
 ####Minimisation 

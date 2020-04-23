@@ -1,17 +1,17 @@
 ;
 ;	File 'mdout.mdp' was generated
-;	By user: marie (1000)
-;	On host: Mosura
-;	At date: Thu Apr 16 23:51:58 2020
+;	By user: ubuntu (1000)
+;	On host: jscheen2
+;	At date: Thu Apr 23 12:41:42 2020
 ;
 ;	Created by:
-;	                      :-) GROMACS - gmx grompp, 2020 (-:
+;	                     :-) GROMACS - gmx grompp, 2019.6 (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home/marie/covid-19/benchmark3
+;	Working dir:  /home/ubuntu/cov2-s-pep/MARIE/test+benchmark/3
 ;	Command line:
-;	  gmx -quiet grompp -f prod_000.mdp -c eq.gro -p topol.top -o md.tpr -maxwarn 1
+;	  gmx -quiet grompp -f prod_test.mdp -c eq.gro -p topol.top -o md.tpr -maxwarn 1 -r em.pdb
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -25,7 +25,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 4000000
+nsteps                   = 250000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -59,11 +59,11 @@ rtpi                     = 0.05
 
 ; OUTPUT CONTROL OPTIONS
 ; Output frequency for coords (x), velocities (v) and forces (f)
-nstxout                  = 100000
-nstvout                  = 100000
+nstxout                  = 10000
+nstvout                  = 10000
 nstfout                  = 0
 ; Output frequency for energies to log file and energy file
-nstlog                   = 100000
+nstlog                   = 10000
 nstcalcenergy            = 100
 nstenergy                = 50000
 ; Output frequency and precision for .xtc file
@@ -77,10 +77,12 @@ compressed-x-grps        = System
 energygrps               = 
 
 ; NEIGHBORSEARCHING PARAMETERS
-; cut-off scheme (Verlet: particle based cut-offs)
+; cut-off scheme (Verlet: particle based cut-offs, group: using charge groups)
 cutoff-scheme            = Verlet
 ; nblist update frequency
 nstlist                  = 10
+; ns algorithm (simple or grid)
+ns_type                  = grid
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no
@@ -325,6 +327,3 @@ userreal4                = 0
 electric-field-x         = 0 0 0 0
 electric-field-y         = 0 0 0 0
 electric-field-z         = 0 0 0 0
-
-; Density guided simulation
-density-guided-simulation-active = false

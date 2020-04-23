@@ -1,0 +1,37 @@
+
+Back Off! I just backed up md.log to ./#md.log.1#
+Reading file eq.tpr, VERSION 2019.6 (single precision)
+Changing nstlist from 10 to 100, rlist from 1 to 1.157
+
+Using 1 MPI thread
+Using 2 OpenMP threads 
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PME tasks will do all aspects on the GPU
+
+NOTE: The number of threads is not equal to the number of (logical) cores
+      and the -pin option is set to auto: will not pin threads to cores.
+      This can lead to significant performance degradation.
+      Consider using -pin on (and -pinoffset in case you run multiple jobs).
+
+Back Off! I just backed up traj.trr to ./#traj.trr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Protein in water'
+10000 steps,     20.0 ps.
+step  200: timed with pme grid 60 60 60, coulomb cutoff 1.000: 825.7 M-cycles
+step  400: timed with pme grid 52 52 52, coulomb cutoff 1.092: 840.1 M-cycles
+step  600: timed with pme grid 48 48 48, coulomb cutoff 1.183: 931.4 M-cycles
+step  800: timed with pme grid 52 52 52, coulomb cutoff 1.092: 844.3 M-cycles
+step 1000: timed with pme grid 56 56 56, coulomb cutoff 1.014: 734.9 M-cycles
+              optimal pme grid 56 56 56, coulomb cutoff 1.014
+step 1100, remaining wall clock time:    53 s          step 1200, remaining wall clock time:    50 s          step 1300, remaining wall clock time:    48 s          step 1400, remaining wall clock time:    46 s          step 1500, remaining wall clock time:    44 s          step 1600, remaining wall clock time:    42 s          step 1700, remaining wall clock time:    41 s          step 1800, remaining wall clock time:    40 s          step 1900, remaining wall clock time:    39 s          step 2000, remaining wall clock time:    37 s          step 2100, remaining wall clock time:    36 s          step 2200, remaining wall clock time:    35 s          step 2300, remaining wall clock time:    35 s          step 2400, remaining wall clock time:    34 s          step 2500, remaining wall clock time:    33 s          step 2600, remaining wall clock time:    32 s          step 2700, remaining wall clock time:    31 s          step 2800, remaining wall clock time:    31 s          step 2900, remaining wall clock time:    30 s          step 3000, remaining wall clock time:    29 s          step 3100, remaining wall clock time:    29 s          step 3200, remaining wall clock time:    28 s          step 3300, remaining wall clock time:    27 s          step 3400, remaining wall clock time:    27 s          step 3500, remaining wall clock time:    26 s          step 3600, remaining wall clock time:    26 s          step 3700, remaining wall clock time:    25 s          step 3800, remaining wall clock time:    25 s          step 3900, remaining wall clock time:    24 s          step 4000, remaining wall clock time:    23 s          step 4100, remaining wall clock time:    23 s          step 4200, remaining wall clock time:    22 s          step 4300, remaining wall clock time:    22 s          step 4400, remaining wall clock time:    22 s          step 4500, remaining wall clock time:    21 s          step 4600, remaining wall clock time:    21 s          step 4700, remaining wall clock time:    20 s          step 4800, remaining wall clock time:    20 s          step 4900, remaining wall clock time:    19 s          step 5000, remaining wall clock time:    19 s          step 5100, remaining wall clock time:    18 s          step 5200, remaining wall clock time:    18 s          step 5300, remaining wall clock time:    17 s          step 5400, remaining wall clock time:    17 s          step 5500, remaining wall clock time:    17 s          step 5600, remaining wall clock time:    16 s          step 5700, remaining wall clock time:    16 s          step 5800, remaining wall clock time:    15 s          step 5900, remaining wall clock time:    15 s          step 6000, remaining wall clock time:    15 s          step 6100, remaining wall clock time:    14 s          step 6200, remaining wall clock time:    14 s          step 6300, remaining wall clock time:    13 s          step 6400, remaining wall clock time:    13 s          step 6500, remaining wall clock time:    12 s          step 6600, remaining wall clock time:    12 s          step 6700, remaining wall clock time:    12 s          step 6800, remaining wall clock time:    11 s          step 6900, remaining wall clock time:    11 s          step 7000, remaining wall clock time:    11 s          step 7100, remaining wall clock time:    10 s          step 7200, remaining wall clock time:    10 s          step 7300, remaining wall clock time:     9 s          step 7400, remaining wall clock time:     9 s          step 7500, remaining wall clock time:     9 s          step 7600, remaining wall clock time:     8 s          step 7700, remaining wall clock time:     8 s          step 7800, remaining wall clock time:     8 s          step 7900, remaining wall clock time:     7 s          step 8000, remaining wall clock time:     7 s          step 8100, remaining wall clock time:     6 s          step 8200, remaining wall clock time:     6 s          step 8300, remaining wall clock time:     6 s          step 8400, remaining wall clock time:     5 s          step 8500, remaining wall clock time:     5 s          step 8600, remaining wall clock time:     5 s          step 8700, remaining wall clock time:     4 s          step 8800, remaining wall clock time:     4 s          step 8900, remaining wall clock time:     3 s          step 9000, remaining wall clock time:     3 s          step 9100, remaining wall clock time:     3 s          step 9200, remaining wall clock time:     2 s          step 9300, remaining wall clock time:     2 s          step 9400, remaining wall clock time:     2 s          step 9500, remaining wall clock time:     1 s          step 9600, remaining wall clock time:     1 s          step 9700, remaining wall clock time:     1 s          step 9800, remaining wall clock time:     0 s          step 9900, remaining wall clock time:     0 s          
+Writing final coordinates.
+step 10000, remaining wall clock time:     0 s          
+               Core t (s)   Wall t (s)        (%)
+       Time:       71.970       35.985      200.0
+                 (ns/day)    (hour/ns)
+Performance:       48.024        0.500

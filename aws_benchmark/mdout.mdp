@@ -1,15 +1,15 @@
 ;
 ;	File 'mdout.mdp' was generated
-;	By user: jjuarez (1002)
-;	On host: yoko
-;	At date: Wed Apr 22 18:22:08 2020
+;	By user: ubuntu (1000)
+;	On host: jscheen2
+;	At date: Thu Apr 23 11:35:18 2020
 ;
 ;	Created by:
-;	                      :-) GROMACS - gmx grompp, 2019 (-:
+;	                     :-) GROMACS - gmx grompp, 2019.6 (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home/jjuarez/cov2-s-pep/aws_benchmark
+;	Working dir:  /home/ubuntu/cov2-s-pep/aws_benchmark
 ;	Command line:
 ;	  gmx -quiet grompp -f md.mdp -c shelix.npt.gro -p shelix.top -o md.tpr -r shelix.npt.gro -maxwarn 1
 
