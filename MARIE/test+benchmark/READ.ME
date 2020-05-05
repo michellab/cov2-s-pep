@@ -9,5 +9,17 @@ Here some test systems to test the AWS
 3. 100 ps simulation on a dummy cov-2 system
 
 
-4. short pmx on a dummy cov-2 system
+4.  RBD system + stapled peptide + fluorophore  + sugar + PMX forcefield (no PMX)
+	1 short system for benchmark 
+		
+	run : gmx -quiet mdrun -s md.tpr -v  -nice 0 -c md.gro -ntmpi 1  -gpu_id 0 -nt $number_CPU
+
+	please run 2 simulations to start with :
+	   - one with maximum available number of CPU 
+	   - one with maximum available number of CPU -2 
+
+	If the second simulation is faster/same speed than the first keep decreasing until you reach the optimum speed 
+
+
+	2 & 3 to be ran with the optimum number of CPU, They will be longer simulations
 
