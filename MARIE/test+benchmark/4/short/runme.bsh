@@ -1,0 +1,17 @@
+#!/bin/bash
+ 
+source /usr/local/gromacs/bin/GMXRC
+echo Script name: $0
+echo $# arguments 
+if  test "$#" -ne 2; 
+    then echo "illegal number of parameters I expected 2  : first the name of the tpr file without extention then the number of CPUs "
+else 
+
+nametpr=$1 
+n_CPU=$2
+
+
+#gmx -quiet mdrun -gpu_id $1 -s md.tpr -v -nt 2 -nice 0 -c md.gro -ntmpi 1;
+gmx -quiet mdrun  -s $nametpr.tpr -v  -nice 0 -c md.gro  -gpu_id 0 -nt $n_CPU ;
+
+fi
