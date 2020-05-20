@@ -1,0 +1,49 @@
+* With Sugars:
+Warning: No residues in chain starting at UYB686 identified as Protein/RNA/DNA.
+
+Warning: No residues in chain starting at 4YB687 identified as Protein/RNA/DNA.
+
+Warning: No residues in chain starting at VMB688 identified as Protein/RNA/DNA.
+
+Warning: No residues in chain starting at 2MA689 identified as Protein/RNA/DNA.
+
+Warning: No residues in chain starting at 0YB690 identified as Protein/RNA/DNA.
+
+The topology folder doesn't contain these sugars
+Need a topology that has all the sugars too!
+
+*  Without sugars: 
+
+Had to add TER after the end of each residue 685, since gromacs interpreted the pdb as one chain and there were issues. 
+
+> BioSimSpace code:
+
+import BioSimSpace as BSS 
+BSS.setVerbose(True) 
+files = ["nosugar.gro", "topol.top"]                                                         
+system = BSS.IO.readMolecules(files, property_map={"GROMACS_PATH" : "/home/sofia/Desktop/COVID19-study/test_fragments_separately/fragments/top"}) 
+BSS.IO.saveMolecules("no_sugar", system, ["rst7", "prm7»])
+
+> ParmEd code: 
+from parmed import gromacs 
+gromacs.GROMACS_TOPDIR = "/home/sofia/Desktop/COVID19-study/test_fragments_separately/fragments/top"
+
+from parmed.gromacs import GROMACS_TOPDIR
+GROMACS_TOPDIR = "/home/sofia/Desktop/COVID19-study/test_fragments_separately/fragments/top" 
+
+import parmed as pmd 
+gmx_top = pmd.load_file('topol.top',xyz='nosugar.gro') 
+gmx_top.save('pmd_no_sugar.prm7', format='amber') 
+gmx_top.save('pmd_no_sugar.rst7', format='rst7') 
+
+Both BSS and pmd worked but pmd’s output couldn’t be visualised with VMD
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+—> If topology is written with gmx pdb2gmx then the file conversions work as well 
+
+
+
+
