@@ -29,8 +29,8 @@ of the License, or (at your option) any later version.
 GROMACS:      gmx mdrun, version 2019
 Executable:   /home/marie/Utilities/gromacs-2019/build-normal/bin/gmx
 Data prefix:  /home/marie/Utilities/gromacs-2019 (source tree)
-Working dir:  /home/marie/GIT_COVID19/cov2-s-pep/screens/screen1_2/instance_1/RBD-o-g-r-ACE2-solv-stp25_prod
-Process ID:   12617
+Working dir:  /home/marie/covid-19/RBD-first-screen/screen2_run1/RBD-o-g-r-ACE2-solv-stp25_prod
+Process ID:   12920
 Command line:
   gmx -quiet mdrun -gpu_id 0 -s md.tpr -v -nt 2 -nice 0 -c md.gro -ntmpi 1
 
@@ -389,7 +389,7 @@ J. Chem. Phys. 126 (2007) pp. 014101
 
 There are: 50053 Atoms
 
-Started mdrun on rank 0 Fri May 22 12:29:07 2020
+Started mdrun on rank 0 Fri May 22 12:32:25 2020
 
            Step           Time
               0        0.00000
@@ -404,72 +404,67 @@ Started mdrun on rank 0 Fri May 22 12:29:07 2020
  Pressure (bar)   Constr. rmsd
    -1.28982e+04    3.37622e-04
 
-step  200: timed with pme grid 56 56 56, coulomb cutoff 1.000: 411.1 M-cycles
-step  400: timed with pme grid 48 48 48, coulomb cutoff 1.130: 416.0 M-cycles
+step  200: timed with pme grid 56 56 56, coulomb cutoff 1.000: 388.7 M-cycles
+step  400: timed with pme grid 48 48 48, coulomb cutoff 1.130: 412.3 M-cycles
 step  600: timed with pme grid 44 44 44, coulomb cutoff 1.233: 449.6 M-cycles
-step  800: timed with pme grid 40 40 40, coulomb cutoff 1.356: 494.0 M-cycles
+step  800: timed with pme grid 48 48 48, coulomb cutoff 1.130: 411.7 M-cycles
+step 1000: timed with pme grid 52 52 52, coulomb cutoff 1.043: 396.8 M-cycles
+step 1200: timed with pme grid 56 56 56, coulomb cutoff 1.000: 373.1 M-cycles
+step 1400: timed with pme grid 48 48 48, coulomb cutoff 1.130: 411.1 M-cycles
+step 1600: timed with pme grid 52 52 52, coulomb cutoff 1.043: 401.8 M-cycles
+step 1800: timed with pme grid 56 56 56, coulomb cutoff 1.000: 377.7 M-cycles
+              optimal pme grid 56 56 56, coulomb cutoff 1.000
 
 
 Received the INT signal, stopping within 100 steps
 
            Step           Time
-            900        1.80000
+           3900        7.80000
 
-Writing checkpoint, step 900 at Fri May 22 12:29:11 2020
+Writing checkpoint, step 3900 at Fri May 22 12:32:33 2020
 
 
    Energies (kJ/mol)
           Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
-    6.64851e+03    8.77915e+03    3.84385e+02    3.97206e+03    4.07268e+04
+    6.86889e+03    8.65272e+03    4.13600e+02    3.96799e+03    4.06482e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-    9.51983e+04   -6.55726e+03   -8.60518e+05    2.15567e+03   -7.09210e+05
+    9.45066e+04   -6.54267e+03   -8.61953e+05    4.92891e+03   -7.08509e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.24090e+05   -5.85120e+05   -5.75426e+05    2.97849e+02   -2.17577e+02
+    1.25275e+05   -5.83234e+05   -5.75721e+05    3.00693e+02   -2.16611e+02
  Pressure (bar)   Constr. rmsd
-    5.76131e+01    2.74023e-05
+   -5.66217e+01    2.98912e-05
 
 	<======  ###############  ==>
 	<====  A V E R A G E S  ====>
 	<==  ###############  ======>
 
-	Statistics over 901 steps using 10 frames
+	Statistics over 3901 steps using 40 frames
 
    Energies (kJ/mol)
           Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
-    6.80971e+03    8.68230e+03    3.93621e+02    3.89087e+03    4.06572e+04
+    6.80738e+03    8.70657e+03    4.03323e+02    3.93131e+03    4.07948e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-    9.56500e+04   -6.56815e+03   -8.62366e+05    2.91978e+03   -7.09930e+05
+    9.53551e+04   -6.54384e+03   -8.63416e+05    4.60425e+03   -7.09357e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.25690e+05   -5.84241e+05   -5.74598e+05    3.01688e+02   -2.18301e+02
+    1.25076e+05   -5.84281e+05   -5.75345e+05    3.00216e+02   -2.16690e+02
  Pressure (bar)   Constr. rmsd
-   -1.22519e+03    0.00000e+00
+   -3.16507e+02    0.00000e+00
 
           Box-X          Box-Y          Box-Z
-    8.66138e+00    8.16609e+00    7.07226e+00
+    8.67208e+00    8.17618e+00    7.08100e+00
 
    Total Virial (kJ/mol)
-    6.05158e+04   -9.66580e+02   -7.40835e+01
-   -9.57852e+02    5.95243e+04    6.08255e+02
-   -7.52902e+01    6.02128e+02    6.13724e+04
+    4.68830e+04   -1.79824e+02    1.91702e+02
+   -1.77378e+02    4.62854e+04   -1.52231e+02
+    1.90264e+02   -1.57120e+02    4.63027e+04
 
    Pressure (bar)
-   -1.23147e+03    5.32619e+01    1.19087e+01
-    5.26834e+01   -1.16041e+03   -5.23008e+01
-    1.19892e+01   -5.18939e+01   -1.28369e+03
+   -3.45189e+02    8.83602e+00   -9.28342e+00
+    8.67516e+00   -3.03092e+02    3.08809e+00
+   -9.18767e+00    3.41179e+00   -3.01240e+02
 
       T-Protein  T-non-Protein
-    3.35415e+02    2.99418e+02
-
-
-       P P   -   P M E   L O A D   B A L A N C I N G
-
- PP/PME load balancing changed the cut-off and PME settings:
-           particle-particle                    PME
-            rcoulomb  rlist            grid      spacing   1/beta
-   initial  1.000 nm  1.001 nm      56  56  56   0.155 nm  0.320 nm
-   final    1.292 nm  1.293 nm      42  42  42   0.207 nm  0.414 nm
- cost-ratio           2.15             0.42
- (note that these numbers concern only part of the total PP and PME load)
+    3.08069e+02    2.99688e+02
 
 
 	M E G A - F L O P S   A C C O U N T I N G
@@ -481,25 +476,25 @@ Writing checkpoint, step 900 at Fri May 22 12:29:11 2020
 
  Computing:                               M-Number         M-Flops  % Flops
 -----------------------------------------------------------------------------
- Pair Search distance check              59.015408         531.139     0.0
- NxN Ewald Elec. + LJ [F]             59718.485376     3941420.035    97.9
- NxN Ewald Elec. + LJ [V&F]             680.370304       72799.623     1.8
- 1,4 nonbonded interactions               8.060346         725.431     0.0
- Shift-X                                  0.500530           3.003     0.0
- Angles                                   5.551962         932.730     0.0
- Propers                                  8.482915        1942.588     0.0
- Impropers                                0.639710         133.060     0.0
- Virial                                   4.558918          82.061     0.0
- Stop-CM                                  0.500530           5.005     0.0
- P-Coupling                               4.554823          27.329     0.0
- Calc-Ekin                                9.109646         245.960     0.0
- Lincs                                    3.091331         185.480     0.0
- Lincs-Mat                               66.623544         266.494     0.0
- Constraint-V                            48.087271         384.698     0.0
- Constraint-Vir                           4.544540         109.069     0.0
- Settle                                  13.968203        4511.730     0.1
+ Pair Search distance check             195.957280        1763.616     0.0
+ NxN Ewald Elec. + LJ [F]            197513.129088    13035866.520    98.0
+ NxN Ewald Elec. + LJ [V&F]            2043.122816      218614.141     1.6
+ 1,4 nonbonded interactions              34.898346        3140.851     0.0
+ Shift-X                                  2.002120          12.013     0.0
+ Angles                                  24.037962        4038.378     0.0
+ Propers                                 36.727915        8410.693     0.1
+ Impropers                                2.769710         576.100     0.0
+ Virial                                  19.588318         352.590     0.0
+ Stop-CM                                  2.002120          20.021     0.0
+ P-Coupling                              19.570723         117.424     0.0
+ Calc-Ekin                               39.141446        1056.819     0.0
+ Lincs                                   13.384331         803.060     0.0
+ Lincs-Mat                              288.455544        1153.822     0.0
+ Constraint-V                           208.200271        1665.602     0.0
+ Constraint-Vir                          19.526540         468.637     0.0
+ Settle                                  60.477203       19534.137     0.1
 -----------------------------------------------------------------------------
- Total                                                 4024305.433   100.0
+ Total                                                13297594.422   100.0
 -----------------------------------------------------------------------------
 
 
@@ -510,24 +505,24 @@ On 1 MPI rank, each using 2 OpenMP threads
  Computing:          Num   Num      Call    Wall time         Giga-Cycles
                      Ranks Threads  Count      (s)         total sum    %
 -----------------------------------------------------------------------------
- Neighbor search        1    2         10       0.152          0.730   3.7
- Launch GPU ops.        1    2       1802       0.085          0.408   2.1
- Force                  1    2        901       0.381          1.826   9.3
- Wait PME GPU gather    1    2        901       0.129          0.619   3.2
- Reduce GPU PME F       1    2        901       0.038          0.183   0.9
- Wait GPU NB local      1    2        901       0.329          1.578   8.0
- NB X/F buffer ops.     1    2       1792       0.156          0.748   3.8
- Write traj.            1    2          2       0.082          0.393   2.0
- Update                 1    2        901       0.086          0.412   2.1
- Constraints            1    2        901       0.310          1.489   7.6
- Rest                                           2.348         11.265  57.3
+ Neighbor search        1    2         40       0.490          2.350   6.1
+ Launch GPU ops.        1    2       7802       0.371          1.782   4.6
+ Force                  1    2       3901       1.632          7.830  20.2
+ Wait PME GPU gather    1    2       3901       0.432          2.070   5.3
+ Reduce GPU PME F       1    2       3901       0.162          0.778   2.0
+ Wait GPU NB local      1    2       3901       0.840          4.028  10.4
+ NB X/F buffer ops.     1    2       7762       0.663          3.183   8.2
+ Write traj.            1    2          2       0.174          0.835   2.2
+ Update                 1    2       3901       0.345          1.656   4.3
+ Constraints            1    2       3901       1.326          6.363  16.4
+ Rest                                           1.644          7.887  20.3
 -----------------------------------------------------------------------------
- Total                                          4.096         19.650 100.0
+ Total                                          8.080         38.761 100.0
 -----------------------------------------------------------------------------
 
                Core t (s)   Wall t (s)        (%)
-       Time:        8.192        4.096      200.0
+       Time:       16.159        8.080      200.0
                  (ns/day)    (hour/ns)
-Performance:       38.010        0.631
-Finished mdrun on rank 0 Fri May 22 12:29:11 2020
+Performance:       83.430        0.288
+Finished mdrun on rank 0 Fri May 22 12:32:33 2020
 
