@@ -1,0 +1,17 @@
+#!/bin/bash
+ 
+
+rootdir=$PWD
+j=0
+for sim  in *prod ; do 
+echo $sim
+cp runme.bsh $sim 
+cd $sim ;
+echo $PWD
+bash runme.bsh $j &
+echo Simulation  $sim submitted on gpu id $j ;
+j=$((j+1)) ; 
+sleep 5 ; 
+
+cd $rootdir;
+done 
