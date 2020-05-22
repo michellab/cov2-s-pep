@@ -5,5 +5,5 @@ source /usr/local/gromacs/bin/GMXRC
 
 
 #gmx -quiet mdrun -gpu_id $1 -s md.tpr -v -nt 2 -nice 0 -c md.gro -ntmpi 1;
-gmx -quiet mdrun  -s md.tpr -nice 0 -c md.gro  -gpu_id $1 -nt 4 ;
+gmx  mdrun  -s md.tpr -nice 0 -c md.gro  -gpu_id $1 -nt 4 ;
 
