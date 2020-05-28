@@ -1,0 +1,1015 @@
+c2g               12.01000	; AMBER-DYES
+c3g               12.01000	; AMBER-DYES
+cag               12.01000	; AMBER-DYES
+ccg               12.01000	; AMBER-DYES
+cdg               12.01000	; AMBER-DYES
+ceg               12.01000	; AMBER-DYES
+cfg               12.01000	; AMBER-DYES
+cg                12.01000	; AMBER-DYES
+cwg               12.01000	; AMBER-DYES
+fg                19.00000	; AMBER-DYES
+h1g                1.00800	; AMBER-DYES
+h4g                1.00800	; AMBER-DYES
+hag                1.00800	; AMBER-DYES
+hcg                1.00800	; AMBER-DYES
+hng                1.00800	; AMBER-DYES
+hog                1.00800	; AMBER-DYES
+n2g               14.01000	; AMBER-DYES
+n3g               14.01000	; AMBER-DYES
+n4g               14.01000	; AMBER-DYES
+nag               14.01000	; AMBER-DYES
+ncg               14.01000	; AMBER-DYES
+ng                14.01000	; AMBER-DYES
+nhg               14.01000	; AMBER-DYES
+og                16.00000	; AMBER-DYES
+ohg               16.00000	; AMBER-DYES
+osg               16.00000	; AMBER-DYES
+s6g               32.06000	; AMBER-DYES
+ssg               32.06000	; AMBER-DYES
+Br                79.90000	; bromine
+C                 12.01000	; sp2 C carbonyl group 
+CA                12.01000	; sp2 C pure aromatic (benzene)
+CB                12.01000	; sp2 aromatic C, 5&6 membered ring junction
+CC                12.01000	; sp2 aromatic C, 5 memb. ring HIS
+CK                12.01000	; sp2 C 5 memb.ring in purines
+CM                12.01000	; sp2 C  pyrimidines in pos. 5 & 6
+CN                12.01000	; sp2 C aromatic 5&6 memb.ring junct.(TRP)
+CQ                12.01000	; sp2 C in 5 mem.ring of purines between 2 N
+CR                12.01000	; sp2 arom as CQ but in HIS
+CT                12.01000	; sp3 aliphatic C
+CV                12.01000	; sp2 arom. 5 memb.ring w/1 N and 1 H (HIS)
+CW                12.01000	; sp2 arom. 5 memb.ring w/1 N-H and 1 H (HIS)
+C*                12.01000	; sp2 arom. 5 memb.ring w/1 subst. (TRP)
+C0                40.08000	; calcium
+F                 19.00000	; fluorine
+H                  1.00800	; H bonded to nitrogen atoms
+HC                 1.00800	; H aliph. bond. to C without electrwd.group
+H1                 1.00800	; H aliph. bond. to C with 1 electrwd. group
+H2                 1.00800	; H aliph. bond. to C with 2 electrwd.groups
+H3                 1.00800	; H aliph. bond. to C with 3 eletrwd.groups
+HA                 1.00800	; H arom. bond. to C without elctrwd. groups
+H4                 1.00800	; H arom. bond. to C with 1 electrwd. group
+H5                 1.00800	; H arom. bond. to C with 2 electrwd. groups
+HO                 1.00800	; hydroxyl group
+HS                 1.00800	; hydrogen bonded to sulphur (pol?)
+HW                 1.00800	; H in TIP3P water
+HP                 1.00800	; H bonded to C next to positively charged gr
+I                126.90000	; iodine  (Applequist)
+Cl                35.45000	; chlorine  (Applequist)
+Na                22.99000	; Na+, ions pol:J.PhysC,11,1541,(1978)
+IB               131.00000	; 'big ion w/ waters' for vacuum (Na+, 6H2O)
+MG                24.30500	; magnesium
+N                 14.01000	; sp2 nitrogen in amide groups
+NA                14.01000	; sp2 N in 5 memb.ring w/H atom (HIS)
+NB                14.01000	; sp2 N in 5 memb.ring w/LP (HIS,ADE,GUA)
+NC                14.01000	; sp2 N in 6 memb.ring w/LP (ADE,GUA)
+N2                14.01000	; sp2 N in amino groups
+N3                14.01000	; sp3 N for charged amino groups (Lys, etc)
+N*                14.01000	; sp2 N 
+O                 16.00000	; carbonyl group oxygen
+OW                16.00000	; oxygen in TIP3P water
+OH                16.00000	; oxygen in hydroxyl group
+OS                16.00000	; ether and ester oxygen
+O2                16.00000	; carboxyl and phosphate group oxygen
+P                 30.97000	; phosphate,pol:JACS,112,8543,90,K.J.Miller
+S                 32.06000	; S in disulfide linkage,pol:JPC,102,2399,98
+SH                32.06000	; S in cystine
+CU                63.55000	; copper
+FE                55.00000	; iron
+K                 39.10000	; potassium
+Rb                85.47000	; rubidium
+Cs               132.90000	; cesium
+OW_spc            15.99940      ; SPC Water OW
+HW_spc             1.00800      ; SPC Water HW
+Li                 6.94000      ; lithium, ions pol:J.PhysC,11,1541,(1978)
+Zn                65.40000      ; Zn2+
+HW_tip4pew         1.00800      ; tip4pEW HW
+OW_tip4pew        16.00000      ; tip4pEW OW
+HW_tip4p           1.00800      ; tip4p HW
+OW_tip4p          16.00000      ; tip4p OW
+HW_tip5p           1.00800      ; tip5p HW
+OW_tip5p          16.00000      ; tip5p OW
+MW                 0.00000      ; Virtual site for tip4p/5p water point charge
+MCH3               0.00000      ; Dummy mass in rigid tetrahedral CH3 group
+MNH3               0.00000      ; Dummy mass in rigid tetrahedral NH3 group
+DUM_O             16.000
+DUM_OH            16.000
+DUM_HO             1.008
+DUM_SH            32.060
+DUM_HS             1.008
+DUM_O2            16.000
+DUM_HC             1.008
+DUM_C             12.010
+DUM_CA            12.010
+DUM_HA             1.008
+DUM_CC            12.010
+DUM_NA            14.010
+DUM_H              1.008
+DUM_CV            12.010
+DUM_H4             1.008
+DUM_CR            12.010
+DUM_H5             1.008
+DUM_NB            14.010
+DUM_CT            12.010
+DUM_HP             1.008
+DUM_N3            14.010
+DUM_H1             1.008
+DUM_S             32.060 
+DUM_N             14.010
+DUM_N2            14.010
+DUM_CW            12.010
+DUM_CB            12.010
+DUM_CN            12.010
+DUM_C*            12.010
+amber99_333       35.45000      ; Cl- Joung
+amber99_337       39.10000      ; K+  potassium Joung
+amber99_338       22.99000      ; Na+ Joung
+amber99_143       22.99000      ; NaS Smith parameters
+amber99_144       35.45000      ; ClS Smith parameters
+amber99_356       22.99000      ; Na+ Joung spce
+amber99_351       35.45000      ; Cl- Joung spce
+; Residue 686 UYB q=-0.194
+; 
+ C1                12.011 ; qtot  -0.1678
+ H1                 1.008 ; qtot  -0.1678
+ O5                15.999 ; qtot  -0.6008
+ C5                12.011 ; qtot  -0.3928
+ H5                 1.008 ; qtot  -0.3928
+ C6                12.011 ; qtot  -0.1038
+H62                 1.008 ; qtot  -0.1038
+H61                 1.008 ; qtot  -0.1038
+ O6                15.999 ; qtot  -0.5628
+ C4                12.011 ; qtot  -0.2608
+ H4                 1.008 ; qtot  -0.2608
+ C3                12.011 ; qtot  -0.0808
+ H3                 1.008 ; qtot  -0.0808
+ O3                15.999 ; qtot  -0.7618
+H3O                 1.008 ; qtot  -0.3388
+ C2                12.011 ; qtot   0.1412
+ H2                 1.008 ; qtot   0.1412
+ N2                14.007 ; qtot  -0.5808
+H2N                 1.008 ; qtot  -0.2808
+C2N                12.011 ; qtot   0.3672
+O2N                15.999 ; qtot  -0.2088
+CME                12.011 ; qtot  -0.1748
+H3M                 1.008 ; qtot  -0.1748
+H2M                 1.008 ; qtot  -0.1748
+H1M                 1.008 ; qtot  -0.1748
+ O4                15.999 ; qtot  -0.6488
+; Residue 687 4YB q=0.000
+; 
+ C1                12.011 ; qtot  -0.3618
+ H1                 1.008 ; qtot  -0.3618
+ O5                15.999 ; qtot  -0.7948
+ C5                12.011 ; qtot  -0.5868
+ H5                 1.008 ; qtot  -0.5868
+ C6                12.011 ; qtot  -0.2978
+H62                 1.008 ; qtot  -0.2978
+H61                 1.008 ; qtot  -0.2978
+ O6                15.999 ; qtot  -0.9868
+H6O                 1.008 ; qtot  -0.5628
+ C4                12.011 ; qtot  -0.2608
+ H4                 1.008 ; qtot  -0.2608
+ C3                12.011 ; qtot  -0.0808
+ H3                 1.008 ; qtot  -0.0808
+ O3                15.999 ; qtot  -0.7618
+H3O                 1.008 ; qtot  -0.3388
+ C2                12.011 ; qtot   0.1412
+ H2                 1.008 ; qtot   0.1412
+ N2                14.007 ; qtot  -0.5808
+H2N                 1.008 ; qtot  -0.2808
+C2N                12.011 ; qtot   0.3672
+O2N                15.999 ; qtot  -0.2088
+CME                12.011 ; qtot  -0.1748
+H3M                 1.008 ; qtot  -0.1748
+H2M                 1.008 ; qtot  -0.1748
+H1M                 1.008 ; qtot  -0.1748
+ O4                15.999 ; qtot  -0.6488
+Cg                 12.011
+H2                  1.008
+Os                 15.999
+Cg                 12.011
+H1                  1.008
+Cg                 12.011
+H1                  1.008
+H1                  1.008
+Oh                 15.999
+Ho                  1.008
+Cg                 12.011
+H1                  1.008
+Cg                 12.011
+H1                  1.008
+Oh                 15.999
+Ho                  1.008
+Cg                 12.011
+H1                  1.008
+Ng                 14.007
+ H                  1.008
+ C                 12.011
+ O                 15.999
+Cg                 12.011
+Hc                  1.008
+Hc                  1.008
+Hc                  1.008
+Os                 15.999
+; Residue 688 VMB q=-0.194
+; 
+ C1                12.011 ; qtot  -0.3348
+ H1                 1.008 ; qtot  -0.3348
+ O5                15.999 ; qtot  -0.7278
+ C5                12.011 ; qtot  -0.5218
+ H5                 1.008 ; qtot  -0.5218
+ C6                12.011 ; qtot  -0.2488
+H62                 1.008 ; qtot  -0.2488
+H61                 1.008 ; qtot  -0.2488
+ O6                15.999 ; qtot  -0.7038
+ C4                12.011 ; qtot  -0.3548
+ H4                 1.008 ; qtot  -0.3548
+ O4                15.999 ; qtot  -1.1008
+H4O                 1.008 ; qtot  -0.6578
+ C3                12.011 ; qtot  -0.3948
+ H3                 1.008 ; qtot  -0.3948
+ C2                12.011 ; qtot  -0.1538
+ H2                 1.008 ; qtot  -0.1538
+ O2                15.999 ; qtot  -0.8178
+H2O                 1.008 ; qtot  -0.3868
+ O3                15.999 ; qtot  -0.8428
+; Residue 689 2MA q=0.000
+; 
+ C1                12.011 ; qtot  -0.4098
+ H1                 1.008 ; qtot  -0.4098
+ C2                12.011 ; qtot  -0.1648
+ H2                 1.008 ; qtot  -0.1648
+ C3                12.011 ; qtot   0.0872
+ H3                 1.008 ; qtot   0.0872
+ C4                12.011 ; qtot   0.4132
+ H4                 1.008 ; qtot   0.4132
+ C5                12.011 ; qtot   0.6892
+ H5                 1.008 ; qtot   0.6892
+ C6                12.011 ; qtot   0.9552
+H62                 1.008 ; qtot   0.9552
+H61                 1.008 ; qtot   0.9552
+ O6                15.999 ; qtot   0.2672
+H6O                 1.008 ; qtot   0.6892
+ O5                15.999 ; qtot   0.1822
+ O4                15.999 ; qtot  -0.5508
+H4O                 1.008 ; qtot  -0.1128
+ O3                15.999 ; qtot  -0.8088
+H3O                 1.008 ; qtot  -0.3778
+ O2                15.999 ; qtot  -0.8428
+; Residue 690 0YB q=0.194
+; 
+ C1                12.011 ; qtot  -0.5558
+ H1                 1.008 ; qtot  -0.5558
+ O5                15.999 ; qtot  -0.9888
+ C5                12.011 ; qtot  -0.7808
+ H5                 1.008 ; qtot  -0.7808
+ C6                12.011 ; qtot  -0.4918
+H62                 1.008 ; qtot  -0.4918
+H61                 1.008 ; qtot  -0.4918
+ O6                15.999 ; qtot  -1.1808
+H6O                 1.008 ; qtot  -0.7568
+ C4                12.011 ; qtot  -0.4548
+ H4                 1.008 ; qtot  -0.4548
+ O4                15.999 ; qtot  -1.1708
+H4O                 1.008 ; qtot  -0.7348
+ C3                12.011 ; qtot  -0.5548
+ H3                 1.008 ; qtot  -0.5548
+ O3                15.999 ; qtot  -1.2358
+H3O                 1.008 ; qtot  -0.8128
+ C2                12.011 ; qtot  -0.3328
+ H2                 1.008 ; qtot  -0.3328
+ N2                14.007 ; qtot  -1.0548
+H2N                 1.008 ; qtot  -0.7548
+C2N                12.011 ; qtot  -0.1068
+O2N                15.999 ; qtot  -0.6828
+CME                12.011 ; qtot  -0.6488
+H3M                 1.008 ; qtot  -0.6488
+H2M                 1.008 ; qtot  -0.6488
+H1M                 1.008 ; qtot  -0.6488
+; Residue 691 0FA q=0.194
+; 
+ C1                12.011 ; qtot  -0.2498
+ H1                 1.008 ; qtot  -0.2498
+ C2                12.011 ; qtot   0.2062
+ H2                 1.008 ; qtot   0.2062
+ C3                12.011 ; qtot   0.4342
+ H3                 1.008 ; qtot   0.4342
+ C4                12.011 ; qtot   0.6972
+ H4                 1.008 ; qtot   0.6972
+ C5                12.011 ; qtot   0.8842
+ H5                 1.008 ; qtot   0.8842
+ C6                12.011 ; qtot   0.9492
+H63                 1.008 ; qtot   0.9492
+H62                 1.008 ; qtot   0.9492
+H61                 1.008 ; qtot   0.9492
+ O5                15.999 ; qtot   0.4552
+ O4                15.999 ; qtot  -0.2838
+H4O                 1.008 ; qtot   0.1632
+ O3                15.999 ; qtot  -0.5298
+H3O                 1.008 ; qtot  -0.1038
+ O2                15.999 ; qtot  -0.9078
+H2O                 1.008 ; qtot  -0.4548
+; Residue 697 VMA q=-0.194
+; 
+ C1                12.011 ; qtot  -0.0218
+ H1                 1.008 ; qtot  -0.0218
+ C2                12.011 ; qtot   0.2232
+ H2                 1.008 ; qtot   0.2232
+ O2                15.999 ; qtot  -0.4938
+H2O                 1.008 ; qtot  -0.0478
+ C3                12.011 ; qtot   0.2042
+ H3                 1.008 ; qtot   0.2042
+ C4                12.011 ; qtot   0.5302
+ H4                 1.008 ; qtot   0.5302
+ C5                12.011 ; qtot   0.8062
+ H5                 1.008 ; qtot   0.8062
+ C6                12.011 ; qtot   1.0722
+H62                 1.008 ; qtot   1.0722
+H61                 1.008 ; qtot   1.0722
+ O6                15.999 ; qtot   0.6122
+ O5                15.999 ; qtot   0.1052
+ O4                15.999 ; qtot  -0.6278
+H4O                 1.008 ; qtot  -0.1898
+ O3                15.999 ; qtot  -0.6488
+; Residue 698 0MA q=0.194
+; 
+ C1                12.011 ; qtot  -0.2158
+ H1                 1.008 ; qtot  -0.2158
+ C2                12.011 ; qtot   0.0292
+ H2                 1.008 ; qtot   0.0292
+ C3                12.011 ; qtot   0.2812
+ H3                 1.008 ; qtot   0.2812
+ C4                12.011 ; qtot   0.6072
+ H4                 1.008 ; qtot   0.6072
+ C5                12.011 ; qtot   0.8832
+ H5                 1.008 ; qtot   0.8832
+ C6                12.011 ; qtot   1.1492
+H62                 1.008 ; qtot   1.1492
+H61                 1.008 ; qtot   1.1492
+ O6                15.999 ; qtot   0.4612
+H6O                 1.008 ; qtot   0.8832
+ O5                15.999 ; qtot   0.3762
+ O4                15.999 ; qtot  -0.3568
+H4O                 1.008 ; qtot   0.0812
+ O3                15.999 ; qtot  -0.6148
+H3O                 1.008 ; qtot  -0.1838
+ O2                15.999 ; qtot  -0.9008
+H2O                 1.008 ; qtot  -0.4548
+Residue 1253 0LB q=0.194
+; 
+ C1                12.011 ; qtot -14.8204
+ H1                 1.008 ; qtot -14.8204
+ O5                15.999 ; qtot -15.2224
+ C5                12.011 ; qtot -15.0824
+ H5                 1.008 ; qtot -15.0824
+ C6                12.011 ; qtot -14.7634
+H62                 1.008 ; qtot -14.7634
+H61                 1.008 ; qtot -14.7634
+ O6                15.999 ; qtot -15.4564
+H6O                 1.008 ; qtot -15.0374
+ C4                12.011 ; qtot -14.8344
+ H4                 1.008 ; qtot -14.8344
+ O4                15.999 ; qtot -15.4984
+H4O                 1.008 ; qtot -15.0614
+ C3                12.011 ; qtot -14.8024
+ H3                 1.008 ; qtot -14.8024
+ O3                15.999 ; qtot -15.4964
+H3O                 1.008 ; qtot -15.0634
+ C2                12.011 ; qtot -14.7064
+ H2                 1.008 ; qtot -14.7064
+ O2                15.999 ; qtot -15.4324
+H2O                 1.008 ; qtot -15.0004
+; Residue 1294 3LB q=0.000
+; 
+ C1                12.011 ; qtot -14.4324
+ H1                 1.008 ; qtot -14.4324
+ O5                15.999 ; qtot -14.8344
+ C5                12.011 ; qtot -14.6944
+ H5                 1.008 ; qtot -14.6944
+ C6                12.011 ; qtot -14.3754
+H62                 1.008 ; qtot -14.3754
+H61                 1.008 ; qtot -14.3754
+ O6                15.999 ; qtot -15.0684
+H6O                 1.008 ; qtot -14.6494
+ C4                12.011 ; qtot -14.4464
+ H4                 1.008 ; qtot -14.4464
+ O4                15.999 ; qtot -15.1104
+H4O                 1.008 ; qtot -14.6734
+ C3                12.011 ; qtot -14.4144
+ H3                 1.008 ; qtot -14.4144
+ C2                12.011 ; qtot -14.0574
+ H2                 1.008 ; qtot -14.0574
+ O2                15.999 ; qtot -14.7834
+H2O                 1.008 ; qtot -14.3514
+ O3                15.999 ; qtot -14.8064
+; Residue 1295 0SA q=-0.806
+; 
+ C2                12.011 ; qtot -14.5694
+ C1                12.011 ; qtot -13.7804
+O1A                15.999 ; qtot -14.5414
+O1B                15.999 ; qtot -15.3024
+ C3                12.011 ; qtot -15.2964
+H3E                 1.008 ; qtot -15.2964
+H3A                 1.008 ; qtot -15.2964
+ C4                12.011 ; qtot -14.9644
+ H4                 1.008 ; qtot -14.9644
+ C5                12.011 ; qtot -14.6564
+ H5                 1.008 ; qtot -14.6564
+ C6                12.011 ; qtot -14.4364
+ H6                 1.008 ; qtot -14.4364
+ C7                12.011 ; qtot -14.3254
+ H7                 1.008 ; qtot -14.3254
+ C8                12.011 ; qtot -13.8334
+ H8                 1.008 ; qtot -13.8334
+ C9                12.011 ; qtot -13.6554
+H9S                 1.008 ; qtot -13.6554
+H9R                 1.008 ; qtot -13.6554
+ O9                15.999 ; qtot -14.3444
+H9O                 1.008 ; qtot -13.9364
+ O8                15.999 ; qtot -14.6754
+H8O                 1.008 ; qtot -14.2634
+ O7                15.999 ; qtot -14.9844
+H7O                 1.008 ; qtot -14.5494
+ O6                15.999 ; qtot -14.9524
+ N5                14.007 ; qtot -15.5814
+H5N                 1.008 ; qtot -15.3014
+C5N                12.011 ; qtot -14.6694
+CME                12.011 ; qtot -14.6724
+H3M                 1.008 ; qtot -14.6724
+H2M                 1.008 ; qtot -14.6724
+H1M                 1.008 ; qtot -14.6724
+O5N                15.999 ; qtot -15.2654
+ O4                15.999 ; qtot -16.0274
+H4O                 1.008 ; qtot -15.6124
+; Residue 1268 2MB q=0.000
+; 
+ C1                12.011 ; qtot -14.6864
+ H1                 1.008 ; qtot -14.6864
+ O5                15.999 ; qtot -15.0794
+ C5                12.011 ; qtot -14.8734
+ H5                 1.008 ; qtot -14.8734
+ C6                12.011 ; qtot -14.6004
+H62                 1.008 ; qtot -14.6004
+H61                 1.008 ; qtot -14.6004
+ O6                15.999 ; qtot -15.2804
+H6O                 1.008 ; qtot -14.8614
+ C4                12.011 ; qtot -14.5124
+ H4                 1.008 ; qtot -14.5124
+ O4                15.999 ; qtot -15.2584
+H4O                 1.008 ; qtot -14.8154
+ C3                12.011 ; qtot -14.5524
+ H3                 1.008 ; qtot -14.5524
+ O3                15.999 ; qtot -15.2444
+H3O                 1.008 ; qtot -14.8144
+ C2                12.011 ; qtot -14.5734
+ H2                 1.008 ; qtot -14.5734
+ O2                15.999 ; qtot -15.0004
+Cg                 12.011 ;
+H2                  1.008 ;
+Os                 15.999 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+H1                  1.008 ;
+Oh                 15.999 ;
+Ho                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Oh                 15.999 ;
+Ho                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Oh                 15.999 ;
+Ho                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Os                 15.999 ;
+c2g               12.01000	; AMBER-DYES
+c3g               12.01000	; AMBER-DYES
+cag               12.01000	; AMBER-DYES
+ccg               12.01000	; AMBER-DYES
+cdg               12.01000	; AMBER-DYES
+ceg               12.01000	; AMBER-DYES
+cfg               12.01000	; AMBER-DYES
+cg                12.01000	; AMBER-DYES
+cwg               12.01000	; AMBER-DYES
+fg                19.00000	; AMBER-DYES
+h1g                1.00800	; AMBER-DYES
+h4g                1.00800	; AMBER-DYES
+hag                1.00800	; AMBER-DYES
+hcg                1.00800	; AMBER-DYES
+hng                1.00800	; AMBER-DYES
+hog                1.00800	; AMBER-DYES
+n2g               14.01000	; AMBER-DYES
+n3g               14.01000	; AMBER-DYES
+n4g               14.01000	; AMBER-DYES
+nag               14.01000	; AMBER-DYES
+ncg               14.01000	; AMBER-DYES
+ng                14.01000	; AMBER-DYES
+nhg               14.01000	; AMBER-DYES
+og                16.00000	; AMBER-DYES
+ohg               16.00000	; AMBER-DYES
+osg               16.00000	; AMBER-DYES
+s6g               32.06000	; AMBER-DYES
+ssg               32.06000	; AMBER-DYES
+Br                79.90000	; bromine
+C                 12.01000	; sp2 C carbonyl group 
+CA                12.01000	; sp2 C pure aromatic (benzene)
+CB                12.01000	; sp2 aromatic C, 5&6 membered ring junction
+CC                12.01000	; sp2 aromatic C, 5 memb. ring HIS
+CK                12.01000	; sp2 C 5 memb.ring in purines
+CM                12.01000	; sp2 C  pyrimidines in pos. 5 & 6
+CN                12.01000	; sp2 C aromatic 5&6 memb.ring junct.(TRP)
+CQ                12.01000	; sp2 C in 5 mem.ring of purines between 2 N
+CR                12.01000	; sp2 arom as CQ but in HIS
+CT                12.01000	; sp3 aliphatic C
+CV                12.01000	; sp2 arom. 5 memb.ring w/1 N and 1 H (HIS)
+CW                12.01000	; sp2 arom. 5 memb.ring w/1 N-H and 1 H (HIS)
+C*                12.01000	; sp2 arom. 5 memb.ring w/1 subst. (TRP)
+C0                40.08000	; calcium
+F                 19.00000	; fluorine
+H                  1.00800	; H bonded to nitrogen atoms
+HC                 1.00800	; H aliph. bond. to C without electrwd.group
+H1                 1.00800	; H aliph. bond. to C with 1 electrwd. group
+H2                 1.00800	; H aliph. bond. to C with 2 electrwd.groups
+H3                 1.00800	; H aliph. bond. to C with 3 eletrwd.groups
+HA                 1.00800	; H arom. bond. to C without elctrwd. groups
+H4                 1.00800	; H arom. bond. to C with 1 electrwd. group
+H5                 1.00800	; H arom. bond. to C with 2 electrwd. groups
+HO                 1.00800	; hydroxyl group
+HS                 1.00800	; hydrogen bonded to sulphur (pol?)
+HW                 1.00800	; H in TIP3P water
+HP                 1.00800	; H bonded to C next to positively charged gr
+I                126.90000	; iodine  (Applequist)
+Cl                35.45000	; chlorine  (Applequist)
+Na                22.99000	; Na+, ions pol:J.PhysC,11,1541,(1978)
+IB               131.00000	; 'big ion w/ waters' for vacuum (Na+, 6H2O)
+MG                24.30500	; magnesium
+N                 14.01000	; sp2 nitrogen in amide groups
+NA                14.01000	; sp2 N in 5 memb.ring w/H atom (HIS)
+NB                14.01000	; sp2 N in 5 memb.ring w/LP (HIS,ADE,GUA)
+NC                14.01000	; sp2 N in 6 memb.ring w/LP (ADE,GUA)
+N2                14.01000	; sp2 N in amino groups
+N3                14.01000	; sp3 N for charged amino groups (Lys, etc)
+N*                14.01000	; sp2 N 
+O                 16.00000	; carbonyl group oxygen
+OW                16.00000	; oxygen in TIP3P water
+OH                16.00000	; oxygen in hydroxyl group
+OS                16.00000	; ether and ester oxygen
+O2                16.00000	; carboxyl and phosphate group oxygen
+P                 30.97000	; phosphate,pol:JACS,112,8543,90,K.J.Miller
+S                 32.06000	; S in disulfide linkage,pol:JPC,102,2399,98
+SH                32.06000	; S in cystine
+CU                63.55000	; copper
+FE                55.00000	; iron
+K                 39.10000	; potassium
+Rb                85.47000	; rubidium
+Cs               132.90000	; cesium
+OW_spc            15.99940      ; SPC Water OW
+HW_spc             1.00800      ; SPC Water HW
+Li                 6.94000      ; lithium, ions pol:J.PhysC,11,1541,(1978)
+Zn                65.40000      ; Zn2+
+HW_tip4pew         1.00800      ; tip4pEW HW
+OW_tip4pew        16.00000      ; tip4pEW OW
+HW_tip4p           1.00800      ; tip4p HW
+OW_tip4p          16.00000      ; tip4p OW
+HW_tip5p           1.00800      ; tip5p HW
+OW_tip5p          16.00000      ; tip5p OW
+MW                 0.00000      ; Virtual site for tip4p/5p water point charge
+MCH3               0.00000      ; Dummy mass in rigid tetrahedral CH3 group
+MNH3               0.00000      ; Dummy mass in rigid tetrahedral NH3 group
+DUM_O             16.000
+DUM_OH            16.000
+DUM_HO             1.008
+DUM_SH            32.060
+DUM_HS             1.008
+DUM_O2            16.000
+DUM_HC             1.008
+DUM_C             12.010
+DUM_CA            12.010
+DUM_HA             1.008
+DUM_CC            12.010
+DUM_NA            14.010
+DUM_H              1.008
+DUM_CV            12.010
+DUM_H4             1.008
+DUM_CR            12.010
+DUM_H5             1.008
+DUM_NB            14.010
+DUM_CT            12.010
+DUM_HP             1.008
+DUM_N3            14.010
+DUM_H1             1.008
+DUM_S             32.060 
+DUM_N             14.010
+DUM_N2            14.010
+DUM_CW            12.010
+DUM_CB            12.010
+DUM_CN            12.010
+DUM_C*            12.010
+amber99_333       35.45000      ; Cl- Joung
+amber99_337       39.10000      ; K+  potassium Joung
+amber99_338       22.99000      ; Na+ Joung
+amber99_143       22.99000      ; NaS Smith parameters
+amber99_144       35.45000      ; ClS Smith parameters
+amber99_356       22.99000      ; Na+ Joung spce
+amber99_351       35.45000      ; Cl- Joung spce
+; Residue 686 UYB q=-0.194
+; 
+ C1                12.011 ; qtot  -0.1678
+ H1                 1.008 ; qtot  -0.1678
+ O5                15.999 ; qtot  -0.6008
+ C5                12.011 ; qtot  -0.3928
+ H5                 1.008 ; qtot  -0.3928
+ C6                12.011 ; qtot  -0.1038
+H62                 1.008 ; qtot  -0.1038
+H61                 1.008 ; qtot  -0.1038
+ O6                15.999 ; qtot  -0.5628
+ C4                12.011 ; qtot  -0.2608
+ H4                 1.008 ; qtot  -0.2608
+ C3                12.011 ; qtot  -0.0808
+ H3                 1.008 ; qtot  -0.0808
+ O3                15.999 ; qtot  -0.7618
+H3O                 1.008 ; qtot  -0.3388
+ C2                12.011 ; qtot   0.1412
+ H2                 1.008 ; qtot   0.1412
+ N2                14.007 ; qtot  -0.5808
+H2N                 1.008 ; qtot  -0.2808
+C2N                12.011 ; qtot   0.3672
+O2N                15.999 ; qtot  -0.2088
+CME                12.011 ; qtot  -0.1748
+H3M                 1.008 ; qtot  -0.1748
+H2M                 1.008 ; qtot  -0.1748
+H1M                 1.008 ; qtot  -0.1748
+ O4                15.999 ; qtot  -0.6488
+; Residue 687 4YB q=0.000
+; 
+ C1                12.011 ; qtot  -0.3618
+ H1                 1.008 ; qtot  -0.3618
+ O5                15.999 ; qtot  -0.7948
+ C5                12.011 ; qtot  -0.5868
+ H5                 1.008 ; qtot  -0.5868
+ C6                12.011 ; qtot  -0.2978
+H62                 1.008 ; qtot  -0.2978
+H61                 1.008 ; qtot  -0.2978
+ O6                15.999 ; qtot  -0.9868
+H6O                 1.008 ; qtot  -0.5628
+ C4                12.011 ; qtot  -0.2608
+ H4                 1.008 ; qtot  -0.2608
+ C3                12.011 ; qtot  -0.0808
+ H3                 1.008 ; qtot  -0.0808
+ O3                15.999 ; qtot  -0.7618
+H3O                 1.008 ; qtot  -0.3388
+ C2                12.011 ; qtot   0.1412
+ H2                 1.008 ; qtot   0.1412
+ N2                14.007 ; qtot  -0.5808
+H2N                 1.008 ; qtot  -0.2808
+C2N                12.011 ; qtot   0.3672
+O2N                15.999 ; qtot  -0.2088
+CME                12.011 ; qtot  -0.1748
+H3M                 1.008 ; qtot  -0.1748
+H2M                 1.008 ; qtot  -0.1748
+H1M                 1.008 ; qtot  -0.1748
+ O4                15.999 ; qtot  -0.6488
+Cg                 12.011
+H2                  1.008
+Os                 15.999
+Cg                 12.011
+H1                  1.008
+Cg                 12.011
+H1                  1.008
+H1                  1.008
+Oh                 15.999
+Ho                  1.008
+Cg                 12.011
+H1                  1.008
+Cg                 12.011
+H1                  1.008
+Oh                 15.999
+Ho                  1.008
+Cg                 12.011
+H1                  1.008
+Ng                 14.007
+ H                  1.008
+ C                 12.011
+ O                 15.999
+Cg                 12.011
+Hc                  1.008
+Hc                  1.008
+Hc                  1.008
+Os                 15.999
+; Residue 688 VMB q=-0.194
+; 
+ C1                12.011 ; qtot  -0.3348
+ H1                 1.008 ; qtot  -0.3348
+ O5                15.999 ; qtot  -0.7278
+ C5                12.011 ; qtot  -0.5218
+ H5                 1.008 ; qtot  -0.5218
+ C6                12.011 ; qtot  -0.2488
+H62                 1.008 ; qtot  -0.2488
+H61                 1.008 ; qtot  -0.2488
+ O6                15.999 ; qtot  -0.7038
+ C4                12.011 ; qtot  -0.3548
+ H4                 1.008 ; qtot  -0.3548
+ O4                15.999 ; qtot  -1.1008
+H4O                 1.008 ; qtot  -0.6578
+ C3                12.011 ; qtot  -0.3948
+ H3                 1.008 ; qtot  -0.3948
+ C2                12.011 ; qtot  -0.1538
+ H2                 1.008 ; qtot  -0.1538
+ O2                15.999 ; qtot  -0.8178
+H2O                 1.008 ; qtot  -0.3868
+ O3                15.999 ; qtot  -0.8428
+; Residue 689 2MA q=0.000
+; 
+ C1                12.011 ; qtot  -0.4098
+ H1                 1.008 ; qtot  -0.4098
+ C2                12.011 ; qtot  -0.1648
+ H2                 1.008 ; qtot  -0.1648
+ C3                12.011 ; qtot   0.0872
+ H3                 1.008 ; qtot   0.0872
+ C4                12.011 ; qtot   0.4132
+ H4                 1.008 ; qtot   0.4132
+ C5                12.011 ; qtot   0.6892
+ H5                 1.008 ; qtot   0.6892
+ C6                12.011 ; qtot   0.9552
+H62                 1.008 ; qtot   0.9552
+H61                 1.008 ; qtot   0.9552
+ O6                15.999 ; qtot   0.2672
+H6O                 1.008 ; qtot   0.6892
+ O5                15.999 ; qtot   0.1822
+ O4                15.999 ; qtot  -0.5508
+H4O                 1.008 ; qtot  -0.1128
+ O3                15.999 ; qtot  -0.8088
+H3O                 1.008 ; qtot  -0.3778
+ O2                15.999 ; qtot  -0.8428
+; Residue 690 0YB q=0.194
+; 
+ C1                12.011 ; qtot  -0.5558
+ H1                 1.008 ; qtot  -0.5558
+ O5                15.999 ; qtot  -0.9888
+ C5                12.011 ; qtot  -0.7808
+ H5                 1.008 ; qtot  -0.7808
+ C6                12.011 ; qtot  -0.4918
+H62                 1.008 ; qtot  -0.4918
+H61                 1.008 ; qtot  -0.4918
+ O6                15.999 ; qtot  -1.1808
+H6O                 1.008 ; qtot  -0.7568
+ C4                12.011 ; qtot  -0.4548
+ H4                 1.008 ; qtot  -0.4548
+ O4                15.999 ; qtot  -1.1708
+H4O                 1.008 ; qtot  -0.7348
+ C3                12.011 ; qtot  -0.5548
+ H3                 1.008 ; qtot  -0.5548
+ O3                15.999 ; qtot  -1.2358
+H3O                 1.008 ; qtot  -0.8128
+ C2                12.011 ; qtot  -0.3328
+ H2                 1.008 ; qtot  -0.3328
+ N2                14.007 ; qtot  -1.0548
+H2N                 1.008 ; qtot  -0.7548
+C2N                12.011 ; qtot  -0.1068
+O2N                15.999 ; qtot  -0.6828
+CME                12.011 ; qtot  -0.6488
+H3M                 1.008 ; qtot  -0.6488
+H2M                 1.008 ; qtot  -0.6488
+H1M                 1.008 ; qtot  -0.6488
+; Residue 691 0FA q=0.194
+; 
+ C1                12.011 ; qtot  -0.2498
+ H1                 1.008 ; qtot  -0.2498
+ C2                12.011 ; qtot   0.2062
+ H2                 1.008 ; qtot   0.2062
+ C3                12.011 ; qtot   0.4342
+ H3                 1.008 ; qtot   0.4342
+ C4                12.011 ; qtot   0.6972
+ H4                 1.008 ; qtot   0.6972
+ C5                12.011 ; qtot   0.8842
+ H5                 1.008 ; qtot   0.8842
+ C6                12.011 ; qtot   0.9492
+H63                 1.008 ; qtot   0.9492
+H62                 1.008 ; qtot   0.9492
+H61                 1.008 ; qtot   0.9492
+ O5                15.999 ; qtot   0.4552
+ O4                15.999 ; qtot  -0.2838
+H4O                 1.008 ; qtot   0.1632
+ O3                15.999 ; qtot  -0.5298
+H3O                 1.008 ; qtot  -0.1038
+ O2                15.999 ; qtot  -0.9078
+H2O                 1.008 ; qtot  -0.4548
+; Residue 697 VMA q=-0.194
+; 
+ C1                12.011 ; qtot  -0.0218
+ H1                 1.008 ; qtot  -0.0218
+ C2                12.011 ; qtot   0.2232
+ H2                 1.008 ; qtot   0.2232
+ O2                15.999 ; qtot  -0.4938
+H2O                 1.008 ; qtot  -0.0478
+ C3                12.011 ; qtot   0.2042
+ H3                 1.008 ; qtot   0.2042
+ C4                12.011 ; qtot   0.5302
+ H4                 1.008 ; qtot   0.5302
+ C5                12.011 ; qtot   0.8062
+ H5                 1.008 ; qtot   0.8062
+ C6                12.011 ; qtot   1.0722
+H62                 1.008 ; qtot   1.0722
+H61                 1.008 ; qtot   1.0722
+ O6                15.999 ; qtot   0.6122
+ O5                15.999 ; qtot   0.1052
+ O4                15.999 ; qtot  -0.6278
+H4O                 1.008 ; qtot  -0.1898
+ O3                15.999 ; qtot  -0.6488
+; Residue 698 0MA q=0.194
+; 
+ C1                12.011 ; qtot  -0.2158
+ H1                 1.008 ; qtot  -0.2158
+ C2                12.011 ; qtot   0.0292
+ H2                 1.008 ; qtot   0.0292
+ C3                12.011 ; qtot   0.2812
+ H3                 1.008 ; qtot   0.2812
+ C4                12.011 ; qtot   0.6072
+ H4                 1.008 ; qtot   0.6072
+ C5                12.011 ; qtot   0.8832
+ H5                 1.008 ; qtot   0.8832
+ C6                12.011 ; qtot   1.1492
+H62                 1.008 ; qtot   1.1492
+H61                 1.008 ; qtot   1.1492
+ O6                15.999 ; qtot   0.4612
+H6O                 1.008 ; qtot   0.8832
+ O5                15.999 ; qtot   0.3762
+ O4                15.999 ; qtot  -0.3568
+H4O                 1.008 ; qtot   0.0812
+ O3                15.999 ; qtot  -0.6148
+H3O                 1.008 ; qtot  -0.1838
+ O2                15.999 ; qtot  -0.9008
+H2O                 1.008 ; qtot  -0.4548
+Residue 1253 0LB q=0.194
+; 
+ C1                12.011 ; qtot -14.8204
+ H1                 1.008 ; qtot -14.8204
+ O5                15.999 ; qtot -15.2224
+ C5                12.011 ; qtot -15.0824
+ H5                 1.008 ; qtot -15.0824
+ C6                12.011 ; qtot -14.7634
+H62                 1.008 ; qtot -14.7634
+H61                 1.008 ; qtot -14.7634
+ O6                15.999 ; qtot -15.4564
+H6O                 1.008 ; qtot -15.0374
+ C4                12.011 ; qtot -14.8344
+ H4                 1.008 ; qtot -14.8344
+ O4                15.999 ; qtot -15.4984
+H4O                 1.008 ; qtot -15.0614
+ C3                12.011 ; qtot -14.8024
+ H3                 1.008 ; qtot -14.8024
+ O3                15.999 ; qtot -15.4964
+H3O                 1.008 ; qtot -15.0634
+ C2                12.011 ; qtot -14.7064
+ H2                 1.008 ; qtot -14.7064
+ O2                15.999 ; qtot -15.4324
+H2O                 1.008 ; qtot -15.0004
+; Residue 1294 3LB q=0.000
+; 
+ C1                12.011 ; qtot -14.4324
+ H1                 1.008 ; qtot -14.4324
+ O5                15.999 ; qtot -14.8344
+ C5                12.011 ; qtot -14.6944
+ H5                 1.008 ; qtot -14.6944
+ C6                12.011 ; qtot -14.3754
+H62                 1.008 ; qtot -14.3754
+H61                 1.008 ; qtot -14.3754
+ O6                15.999 ; qtot -15.0684
+H6O                 1.008 ; qtot -14.6494
+ C4                12.011 ; qtot -14.4464
+ H4                 1.008 ; qtot -14.4464
+ O4                15.999 ; qtot -15.1104
+H4O                 1.008 ; qtot -14.6734
+ C3                12.011 ; qtot -14.4144
+ H3                 1.008 ; qtot -14.4144
+ C2                12.011 ; qtot -14.0574
+ H2                 1.008 ; qtot -14.0574
+ O2                15.999 ; qtot -14.7834
+H2O                 1.008 ; qtot -14.3514
+ O3                15.999 ; qtot -14.8064
+; Residue 1295 0SA q=-0.806
+; 
+ C2                12.011 ; qtot -14.5694
+ C1                12.011 ; qtot -13.7804
+O1A                15.999 ; qtot -14.5414
+O1B                15.999 ; qtot -15.3024
+ C3                12.011 ; qtot -15.2964
+H3E                 1.008 ; qtot -15.2964
+H3A                 1.008 ; qtot -15.2964
+ C4                12.011 ; qtot -14.9644
+ H4                 1.008 ; qtot -14.9644
+ C5                12.011 ; qtot -14.6564
+ H5                 1.008 ; qtot -14.6564
+ C6                12.011 ; qtot -14.4364
+ H6                 1.008 ; qtot -14.4364
+ C7                12.011 ; qtot -14.3254
+ H7                 1.008 ; qtot -14.3254
+ C8                12.011 ; qtot -13.8334
+ H8                 1.008 ; qtot -13.8334
+ C9                12.011 ; qtot -13.6554
+H9S                 1.008 ; qtot -13.6554
+H9R                 1.008 ; qtot -13.6554
+ O9                15.999 ; qtot -14.3444
+H9O                 1.008 ; qtot -13.9364
+ O8                15.999 ; qtot -14.6754
+H8O                 1.008 ; qtot -14.2634
+ O7                15.999 ; qtot -14.9844
+H7O                 1.008 ; qtot -14.5494
+ O6                15.999 ; qtot -14.9524
+ N5                14.007 ; qtot -15.5814
+H5N                 1.008 ; qtot -15.3014
+C5N                12.011 ; qtot -14.6694
+CME                12.011 ; qtot -14.6724
+H3M                 1.008 ; qtot -14.6724
+H2M                 1.008 ; qtot -14.6724
+H1M                 1.008 ; qtot -14.6724
+O5N                15.999 ; qtot -15.2654
+ O4                15.999 ; qtot -16.0274
+H4O                 1.008 ; qtot -15.6124
+; Residue 1268 2MB q=0.000
+; 
+ C1                12.011 ; qtot -14.6864
+ H1                 1.008 ; qtot -14.6864
+ O5                15.999 ; qtot -15.0794
+ C5                12.011 ; qtot -14.8734
+ H5                 1.008 ; qtot -14.8734
+ C6                12.011 ; qtot -14.6004
+H62                 1.008 ; qtot -14.6004
+H61                 1.008 ; qtot -14.6004
+ O6                15.999 ; qtot -15.2804
+H6O                 1.008 ; qtot -14.8614
+ C4                12.011 ; qtot -14.5124
+ H4                 1.008 ; qtot -14.5124
+ O4                15.999 ; qtot -15.2584
+H4O                 1.008 ; qtot -14.8154
+ C3                12.011 ; qtot -14.5524
+ H3                 1.008 ; qtot -14.5524
+ O3                15.999 ; qtot -15.2444
+H3O                 1.008 ; qtot -14.8144
+ C2                12.011 ; qtot -14.5734
+ H2                 1.008 ; qtot -14.5734
+ O2                15.999 ; qtot -15.0004
+Cg                 12.011 ;
+H2                  1.008 ;
+Os                 15.999 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+H1                  1.008 ;
+Oh                 15.999 ;
+Ho                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Oh                 15.999 ;
+Ho                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Oh                 15.999 ;
+Ho                  1.008 ;
+Cg                 12.011 ;
+H1                  1.008 ;
+Os                 15.999 ;
+; Residue 722 0SA q=-0.806
+; 
+Cy                 12.011 
+ C                 12.011 
+O2                 15.999 
+O2                 15.999 
+Cg                 12.011 
+Hc                  1.008 
+Hc                  1.008 
+Cg                 12.011 
+H1                  1.008 
+Cg                 12.011 
+H1                  1.008 
+Cg                 12.011 
+H1                  1.008 
+Cg                 12.011 
+H1                  1.008 
+Cg                 12.011 
+H1                  1.008 
+Cg                 12.011 
+H1                  1.008 
+H1                  1.008 
+Oh                 15.999 
+Ho                  1.008 
+Oh                 15.999 
+Ho                  1.008 
+Oh                 15.999 
+Ho                  1.008 
+Oy                 15.999 
+Ng                 14.007 
+ H                  1.008 
+ C                 12.011 
+Cg                 12.011 
+Hc                  1.008 
+Hc                  1.008 
+Hc                  1.008 
+ O                 15.999 
+Oh                 15.999 
+Ho                  1.008 

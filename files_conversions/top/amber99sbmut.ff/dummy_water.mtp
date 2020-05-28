@@ -1,0 +1,31 @@
+[ W2N ] ;
+
+ [ morphes ]
+  OW      OW   ->    CL       Cl
+  HW1     HW   ->    DHW1     DUM_HO 
+  HW2     HW   ->    DHW2     DUM_HO
+
+ [ atoms ]
+; id  at type     res nr  res name  at name  cg nr  charge    mass
+       OW      OW          -0.834     16.00000            Cl          35.000 ;  types != | charge != 
+       HW1     HW           0.417      1.00800            DUM_HO      0.00   ;  types != | charge != 
+       HW2     HW           0.417      1.00800            DUM_HO      0.00   ;  types != | charge != 
+
+
+[ W2P ] ;
+
+ [ morphes ]
+  OW      OW   ->    NA       Na
+  HW1     HW   ->    DHW1     DUM_HO 
+  HW2     HW   ->    DHW2     DUM_HO
+
+ [ atoms ]
+; id  at type     res nr  res name  at name  cg nr  charge    mass
+       OW      OW          -0.834     16.00000            Na          23.000 ;  types != | charge != 
+       HW1     HW           0.417      1.00800            DUM_HO      0.00   ;  types != | charge != 
+       HW2     HW           0.417      1.00800            DUM_HO      0.00   ;  types != | charge != 
+
+
+                
+
+

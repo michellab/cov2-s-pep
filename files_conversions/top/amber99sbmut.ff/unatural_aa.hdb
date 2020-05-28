@@ -1,0 +1,46 @@
+S51 8
+1   1	H	N	-C	CA	
+3	4	H1B	C1B	CA	N	
+2	6	HB	CB	CA	CC	
+2	6	HC	CC	CB	CD	
+2	6	HD	CD	CC	CE	
+1	1	HE	CE	CF	CY
+1	1	HF	CF	CE	CD
+2	6	HG	CY	CF	CE
+S52 4
+1   1	H	N	-C	CA	
+3	4	H1B	C1B	CA	N	
+2	6	HB	CB	CA	CY	
+2	6	HC	CY	CB	CA	
+R51 8
+1   1	H	N	-C	CA	
+3	4	H1B	C1B	CA	N	
+2	6	HB	CB	CA	CC	
+2	6	HC	CC	CB	CD	
+2	6	HD	CD	CC	CE	
+1	1	HE	CE	CF	CY
+1	1	HF	CF	CE	CD
+2	6	HG	CY	CF	CE
+R52 4
+1   1	H	N	-C	CA	
+3	4	H1B	C1B	CA	N	
+2	6	HB	CB	CA	CY	
+2	6	HC	CY	CB	CA	
+R72 7
+1   1	H	N	-C	CA	
+3	4	H1B	C1B	CA	N	
+2	6	HB	CB	CA	CC	
+2	6	HC	CC	CB	CD	
+2	6	HD	CD	CC	CE	
+2	6	HE	CE	CD	CC
+2	6	HF	CY	CE	CD
+CBA 	7
+1       1       H       N       -C      CA
+1       5       HA      CA      N       C       CB
+2	6	HB	CB	CA	CG	
+1	5	HG	CG	CB	CD1	CD2	
+2	6	HD1	CD1	CE	CG	
+2	6	HD2	CD2	CE	CG	
+2	6	HE	CE	CD1	CD2	
+
+
