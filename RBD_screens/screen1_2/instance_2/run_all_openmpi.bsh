@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+mpirun -np 8 gmx_mpi mdrun  -s md  -multidir $(ls -d  *prod)
