@@ -1,0 +1,24 @@
+trajin r1/helix2_f2s.r1.md1.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md2.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md3.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md4.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md5.nc 1 99999999 50
+ 
+trajin r3/helix2_f2s.r3.md1.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md2.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md3.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md4.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md5.nc 1 99999999 50
+
+trajin r4/helix2_f2s.r4.md1.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md2.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md3.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md4.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md5.nc 1 99999999 50
+
+autoimage
+rmsd align first :27-200@CA out cluster_tail/rmsd.dat
+rmsd tailrms first :15-23@CA out cluster_tail/rmsd.dat nofit
+cluster data tailrms kmeans clusters 10 randompoint kseed 75 summary cluster_tail/summary.dat out cluster_tail/cluster.dat
+go
+quit

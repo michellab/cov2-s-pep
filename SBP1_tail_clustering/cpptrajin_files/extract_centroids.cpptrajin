@@ -1,0 +1,32 @@
+trajin r1/helix2_f2s.r1.md1.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md2.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md3.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md4.nc 1 99999999 50
+trajin r1/helix2_f2s.r1.md5.nc 1 99999999 50
+
+trajin r3/helix2_f2s.r3.md1.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md2.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md3.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md4.nc 1 99999999 50
+trajin r3/helix2_f2s.r3.md5.nc 1 99999999 50
+
+trajin r4/helix2_f2s.r4.md1.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md2.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md3.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md4.nc 1 99999999 50
+trajin r4/helix2_f2s.r4.md5.nc 1 99999999 50
+
+autoimage
+strip :WAT,Na+,Cl-
+trajout centroid1.pdb onlyframes 381
+trajout centroid2.pdb onlyframes 597
+trajout centroid3.pdb onlyframes 2464
+trajout centroid4.pdb onlyframes 2615
+trajout centroid5.pdb onlyframes 1581
+trajout centroid6.pdb onlyframes 1720
+trajout centroid7.pdb onlyframes 2980
+trajout centroid8.pdb onlyframes 1809
+trajout centroid9.pdb onlyframes 2660
+trajout centroid10.pdb onlyframes 2960
+go
+quit
