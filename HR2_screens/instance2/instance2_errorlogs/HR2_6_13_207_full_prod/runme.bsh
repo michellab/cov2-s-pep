@@ -1,0 +1,9 @@
+#!/bin/bash
+ 
+source /usr/local/gromacs/bin/GMXRC
+gpu_id=$1
+pinoffset=$(( 4*gpu_id ))
+
+#gmx -quiet mdrun -gpu_id $1 -s md.tpr -v -nt 2 -nice 0 -c md.gro -ntmpi 1;
+gmx  mdrun  -s md.tpr -nice 0 -c md.gro  -gpu_id $gpu_id, -nt 4  -ntmpi 1 -pin on -pinoffset  $pinoffset -pinstride 1;
+

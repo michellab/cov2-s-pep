@@ -8,10 +8,10 @@ echo $sim
 cp runme.bsh $sim 
 cd $sim ;
 echo $PWD
-bash runme.bsh $j > output$sim.log &
+bash runme.bsh $j > output$sim.log 2> output$sim.stdout &
 echo Simulation  $sim submitted on gpu id $j ;
 j=$((j+1)) ; 
-sleep 5 ; 
+sleep 3 ; 
 
 cd $rootdir;
 done 

@@ -1,0 +1,160 @@
+                      :-) GROMACS - gmx mdrun, 2019.6 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2018, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2019.6
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/ubuntu/instance2/HR2_6_13_088_full_prod
+Process ID:   27848
+Command line:
+  gmx mdrun -s md.tpr -nice 0 -c md.gro -gpu_id 2, -nt 4 -ntmpi 1 -pin on -pinoffset 8 -pinstride 1
+
+GROMACS version:    2019.6
+Precision:          single
+Memory model:       64 bit
+MPI library:        thread_mpi
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        CUDA
+SIMD instructions:  AVX2_256
+FFT library:        fftw-3.3.8-sse2-avx-avx2-avx2_128-avx512
+RDTSCP usage:       enabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+C compiler:         /usr/bin/cc GNU 7.5.0
+C compiler flags:    -mavx2 -mfma     -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+C++ compiler:       /usr/bin/c++ GNU 7.5.0
+C++ compiler flags:  -mavx2 -mfma    -std=c++11   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+CUDA compiler:      /usr/local/cuda-10.1/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2019 NVIDIA Corporation;Built on Sun_Jul_28_19:07:16_PDT_2019;Cuda compilation tools, release 10.1, V10.1.243
+CUDA compiler flags:-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=compute_75;-use_fast_math;-D_FORCE_INLINES;; ;-mavx2;-mfma;-std=c++11;-O3;-DNDEBUG;-funroll-all-loops;-fexcess-precision=fast;
+CUDA driver:        10.20
+CUDA runtime:       10.10
+
+
+Running on 1 node with total 32 cores, 64 logical cores, 16 compatible GPUs
+Hardware detected:
+  CPU info:
+    Vendor: Intel
+    Brand:  Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+    Family: 6   Model: 79   Stepping: 1
+    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+  Hardware topology: Basic
+    Sockets, cores, and logical processors:
+      Socket  0: [   0  32] [   1  33] [   2  34] [   3  35] [   4  36] [   5  37] [   6  38] [   7  39] [   8  40] [   9  41] [  10  42] [  11  43] [  12  44] [  13  45] [  14  46] [  15  47]
+      Socket  1: [  16  48] [  17  49] [  18  50] [  19  51] [  20  52] [  21  53] [  22  54] [  23  55] [  24  56] [  25  57] [  26  58] [  27  59] [  28  60] [  29  61] [  30  62] [  31  63]
+  GPU info:
+    Number of GPUs detected: 16
+    #0: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #1: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #2: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #3: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #4: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #5: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #6: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #7: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #8: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #9: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #10: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #11: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #12: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #13: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #14: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #15: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE CITE THE DOI FOR THIS VERSION OF GROMACS ++++
+https://doi.org/10.5281/zenodo.3685922
+-------- -------- --- Thank You --- -------- --------
+
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2019.6
+Source file: src/gromacs/fileio/tpxio.cpp (line 2695)
+
+Fatal error:
+reading tpx file (md.tpr) version 119 with version 116 program
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
