@@ -1,0 +1,10 @@
+Input file for running PB in serial
+&general
+        keep_files=2,
+        netcdf=1,
+
+/
+&pb
+        istrng=0.150, indi=10,
+/
+
