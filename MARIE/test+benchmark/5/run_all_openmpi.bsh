@@ -14,7 +14,7 @@ module load gromacs/2019/gmx
 
 
 
-mpirun -n 8 gmx_mpi mdrun  -s md_short  -multidir $(ls -d  *prod)  -gpu_id 0123
+mpirun -n 8 gmx_mpi mdrun  -s md  -multidir $(ls -d  *prod)  -gpu_id 0123
 
 ####DEBUG 
 #mpirun -np 8 gmx_mpi mdrun  -s md_short   -multidir $(ls -d  *prod) -gpu_id 0123
