@@ -1,0 +1,9 @@
+#!/bin/bash
+ 
+
+gpu_id=$1
+pinoffset=$(( 4*gpu_id ))
+
+
+gmx  mdrun  -s md.tpr -nice 0 -c md.gro  -gpu_id $gpu_id, -nt 4  -ntmpi 1 -pin on -pinoffset  $pinoffset -pinstride 1;
+

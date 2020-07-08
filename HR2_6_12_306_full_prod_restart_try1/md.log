@@ -1,0 +1,3079 @@
+                      :-) GROMACS - gmx mdrun, 2019.6 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2018, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2019.6
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/ubuntu/sims/HR2_6_12_306_full_prod
+Process ID:   57983
+Command line:
+  gmx mdrun -s md.tpr -nice 0 -c md.gro -gpu_id 6, -nt 4 -ntmpi 1 -pin on -pinoffset 24 -pinstride 1
+
+GROMACS version:    2019.6
+Precision:          single
+Memory model:       64 bit
+MPI library:        thread_mpi
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        CUDA
+SIMD instructions:  AVX2_256
+FFT library:        fftw-3.3.8-sse2-avx-avx2-avx2_128-avx512
+RDTSCP usage:       enabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+C compiler:         /usr/bin/cc GNU 7.5.0
+C compiler flags:    -mavx2 -mfma     -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+C++ compiler:       /usr/bin/c++ GNU 7.5.0
+C++ compiler flags:  -mavx2 -mfma    -std=c++11   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+CUDA compiler:      /usr/local/cuda-10.1/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2019 NVIDIA Corporation;Built on Sun_Jul_28_19:07:16_PDT_2019;Cuda compilation tools, release 10.1, V10.1.243
+CUDA compiler flags:-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=compute_75;-use_fast_math;-D_FORCE_INLINES;; ;-mavx2;-mfma;-std=c++11;-O3;-DNDEBUG;-funroll-all-loops;-fexcess-precision=fast;
+CUDA driver:        10.20
+CUDA runtime:       10.10
+
+
+Running on 1 node with total 32 cores, 64 logical cores, 16 compatible GPUs
+Hardware detected:
+  CPU info:
+    Vendor: Intel
+    Brand:  Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+    Family: 6   Model: 79   Stepping: 1
+    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+  Hardware topology: Basic
+    Sockets, cores, and logical processors:
+      Socket  0: [   0  32] [   1  33] [   2  34] [   3  35] [   4  36] [   5  37] [   6  38] [   7  39] [   8  40] [   9  41] [  10  42] [  11  43] [  12  44] [  13  45] [  14  46] [  15  47]
+      Socket  1: [  16  48] [  17  49] [  18  50] [  19  51] [  20  52] [  21  53] [  22  54] [  23  55] [  24  56] [  25  57] [  26  58] [  27  59] [  28  60] [  29  61] [  30  62] [  31  63]
+  GPU info:
+    Number of GPUs detected: 16
+    #0: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #1: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #2: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #3: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #4: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #5: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #6: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #7: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #8: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #9: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #10: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #11: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #12: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #13: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #14: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+    #15: NVIDIA Tesla K80, compute cap.: 3.7, ECC: yes, stat: compatible
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE CITE THE DOI FOR THIS VERSION OF GROMACS ++++
+https://doi.org/10.5281/zenodo.3685922
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = md
+   tinit                          = 0
+   dt                             = 0.002
+   nsteps                         = 50000000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100
+   bd-fric                        = 0
+   ld-seed                        = 849196828
+   emtol                          = 10
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 0
+   nstvout                        = 0
+   nstfout                        = 0
+   nstlog                         = 500000
+   nstcalcenergy                  = 100
+   nstenergy                      = 500000
+   nstxout-compressed             = 50000
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Verlet
+   nstlist                        = 10
+   ns-type                        = Grid
+   pbc                            = xyz
+   periodic-molecules             = false
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1
+   coulombtype                    = PME
+   coulomb-modifier               = Potential-shift
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = Potential-shift
+   rvdw-switch                    = 0
+   rvdw                           = 1
+   DispCorr                       = EnerPres
+   table-extension                = 1
+   fourierspacing                 = 0.16
+   fourier-nx                     = 84
+   fourier-ny                     = 64
+   fourier-nz                     = 56
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   tcoupl                         = V-rescale
+   nsttcouple                     = 10
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = false
+   pcoupl                         = Berendsen
+   pcoupltype                     = Isotropic
+   nstpcouple                     = 10
+   tau-p                          = 1
+   compressibility (3x3):
+      compressibility[    0]={ 4.50000e-05,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  4.50000e-05,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  4.50000e-05}
+   ref-p (3x3):
+      ref-p[    0]={ 1.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  1.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  1.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = false
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = true
+   Shake-SOR                      = false
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = false
+   awh                            = false
+   rotation                       = false
+   interactiveMD                  = false
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = false
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = false
+   swapcoords                     = no
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+   applied-forces:
+     electric-field:
+       x:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       y:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       z:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+grpopts:
+   nrdf:     7765.41      239081
+   ref-t:         300         300
+   tau-t:         0.1         0.1
+annealing:          No          No
+annealing-npoints:           0           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp-flags[  0]: 0
+
+Changing nstlist from 10 to 100, rlist from 1 to 1.16
+
+Using 1 MPI thread
+Using 4 OpenMP threads 
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:6,PME:6
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PME tasks will do all aspects on the GPU
+Applying core pinning offset 24
+Pinning threads with a user-specified logical core stride of 1
+System total charge: 0.000
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.320163 nm for Ewald
+Potential shift: LJ r^-12: -1.000e+00 r^-6: -1.000e+00, Ewald -1.000e-05
+Initialized non-bonded Ewald correction tables, spacing: 9.33e-04 size: 1073
+
+Long Range LJ corr.: <C6> 3.0541e-04
+Generated table with 1079 data points for Ewald.
+Tabscale = 500 points/nm
+Generated table with 1079 data points for LJ6.
+Tabscale = 500 points/nm
+Generated table with 1079 data points for LJ12.
+Tabscale = 500 points/nm
+Generated table with 1079 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1079 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1079 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+
+Using GPU 8x8 nonbonded short-range kernels
+
+Using a dual 8x4 pair-list setup updated with dynamic, rolling pruning:
+  outer list: updated every 100 steps, buffer 0.160 nm, rlist 1.160 nm
+  inner list: updated every  10 steps, buffer 0.002 nm, rlist 1.002 nm
+At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
+  outer list: updated every 100 steps, buffer 0.308 nm, rlist 1.308 nm
+  inner list: updated every  10 steps, buffer 0.043 nm, rlist 1.043 nm
+
+Using Lorentz-Berthelot Lennard-Jones combination rule
+
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 6468
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+G. Bussi, D. Donadio and M. Parrinello
+Canonical sampling through velocity rescaling
+J. Chem. Phys. 126 (2007) pp. 014101
+-------- -------- --- Thank You --- -------- --------
+
+There are: 123280 Atoms
+
+Started mdrun on rank 0 Mon Jun 29 15:13:24 2020
+
+           Step           Time
+              0        0.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.37786e+04    9.02389e+03    5.75509e+02    7.37724e+03    1.27880e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.55848e+05   -1.65872e+04   -2.15620e+06    1.18447e+04    2.19029e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.74624e+06    3.37831e+05   -1.40841e+06   -1.39181e+06    3.29207e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.35522e+02   -1.47586e+04    3.65913e-04
+
+step  200: timed with pme grid 84 64 56, coulomb cutoff 1.000: 1679.0 M-cycles
+step  400: timed with pme grid 80 56 48, coulomb cutoff 1.136: 1939.3 M-cycles
+step  600: timed with pme grid 80 56 52, coulomb cutoff 1.118: 2044.3 M-cycles
+step  800: timed with pme grid 80 60 52, coulomb cutoff 1.048: 1895.0 M-cycles
+step 1000: timed with pme grid 80 60 56, coulomb cutoff 1.046: 1874.3 M-cycles
+step 1200: timed with pme grid 84 64 56, coulomb cutoff 1.000: 1777.6 M-cycles
+              optimal pme grid 84 64 56, coulomb cutoff 1.000
+Writing checkpoint, step 111900 at Mon Jun 29 15:28:24 2020
+
+
+Writing checkpoint, step 224200 at Mon Jun 29 15:43:24 2020
+
+
+Writing checkpoint, step 336300 at Mon Jun 29 15:58:25 2020
+
+
+Writing checkpoint, step 448200 at Mon Jun 29 16:13:24 2020
+
+
+           Step           Time
+         500000     1000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44633e+04    9.21682e+03    5.22660e+02    9.10042e+03    1.30080e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43574e+05   -1.56887e+04   -2.12679e+06    1.26495e+04    1.40779e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72273e+06    3.07462e+05   -1.41527e+06   -1.47805e+06    2.99613e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10723e+02    1.85260e+01    2.73376e-05
+
+Writing checkpoint, step 560200 at Mon Jun 29 16:28:25 2020
+
+
+Writing checkpoint, step 672000 at Mon Jun 29 16:43:24 2020
+
+
+Writing checkpoint, step 783800 at Mon Jun 29 16:58:24 2020
+
+
+Writing checkpoint, step 895600 at Mon Jun 29 17:13:24 2020
+
+
+           Step           Time
+        1000000     2000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44283e+04    9.07020e+03    5.25419e+02    9.00975e+03    1.30000e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42897e+05   -1.56547e+04   -2.12434e+06    1.26016e+04    1.39966e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72132e+06    3.08712e+05   -1.41261e+06   -1.54396e+06    3.00831e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09813e+02    2.42261e+01    2.78343e-05
+
+Writing checkpoint, step 1007400 at Mon Jun 29 17:28:24 2020
+
+
+Writing checkpoint, step 1119200 at Mon Jun 29 17:43:24 2020
+
+
+Writing checkpoint, step 1231000 at Mon Jun 29 17:58:25 2020
+
+
+Writing checkpoint, step 1342800 at Mon Jun 29 18:13:25 2020
+
+
+Writing checkpoint, step 1454600 at Mon Jun 29 18:28:25 2020
+
+
+           Step           Time
+        1500000     3000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44344e+04    9.28139e+03    5.98424e+02    9.07864e+03    1.29943e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42886e+05   -1.56729e+04   -2.12651e+06    1.25543e+04    1.42240e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72327e+06    3.08950e+05   -1.41432e+06   -1.61010e+06    3.01064e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10301e+02   -4.05512e+01    2.76421e-05
+
+Writing checkpoint, step 1566300 at Mon Jun 29 18:43:24 2020
+
+
+Writing checkpoint, step 1678200 at Mon Jun 29 18:58:25 2020
+
+
+Writing checkpoint, step 1789900 at Mon Jun 29 19:13:24 2020
+
+
+Writing checkpoint, step 1901700 at Mon Jun 29 19:28:24 2020
+
+
+           Step           Time
+        2000000     4000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42952e+04    9.13373e+03    5.48471e+02    9.09709e+03    1.30067e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41502e+05   -1.56771e+04   -2.12718e+06    1.24793e+04    1.80538e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72555e+06    3.06575e+05   -1.41897e+06   -1.67627e+06    2.98749e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10412e+02   -9.90675e+01    2.68170e-05
+
+Writing checkpoint, step 2013400 at Mon Jun 29 19:43:24 2020
+
+
+Writing checkpoint, step 2125200 at Mon Jun 29 19:58:24 2020
+
+
+Writing checkpoint, step 2237000 at Mon Jun 29 20:13:25 2020
+
+
+Writing checkpoint, step 2348700 at Mon Jun 29 20:28:25 2020
+
+
+Writing checkpoint, step 2460400 at Mon Jun 29 20:43:24 2020
+
+
+           Step           Time
+        2500000     5000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45541e+04    9.24874e+03    6.42177e+02    8.95083e+03    1.29767e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43954e+05   -1.56509e+04   -2.12795e+06    1.24179e+04    1.66492e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72390e+06    3.09269e+05   -1.41463e+06   -1.74251e+06    3.01374e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09711e+02   -5.28202e+01    2.85481e-05
+
+Writing checkpoint, step 2572200 at Mon Jun 29 20:58:24 2020
+
+
+Writing checkpoint, step 2684000 at Mon Jun 29 21:13:24 2020
+
+
+Writing checkpoint, step 2795800 at Mon Jun 29 21:28:24 2020
+
+
+Writing checkpoint, step 2907500 at Mon Jun 29 21:43:24 2020
+
+
+           Step           Time
+        3000000     6000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41603e+04    9.22695e+03    5.86493e+02    8.95182e+03    1.29506e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43913e+05   -1.56557e+04   -2.12802e+06    1.23859e+04    1.55548e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72479e+06    3.08025e+05   -1.41677e+06   -1.80912e+06    3.00162e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09838e+02   -9.06352e+00    2.71490e-05
+
+Writing checkpoint, step 3019300 at Mon Jun 29 21:58:24 2020
+
+
+Writing checkpoint, step 3131100 at Mon Jun 29 22:13:25 2020
+
+
+Writing checkpoint, step 3242800 at Mon Jun 29 22:28:24 2020
+
+
+Writing checkpoint, step 3354500 at Mon Jun 29 22:43:24 2020
+
+
+Writing checkpoint, step 3466300 at Mon Jun 29 22:58:25 2020
+
+
+           Step           Time
+        3500000     7000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46197e+04    9.31535e+03    5.84274e+02    8.85189e+03    1.29075e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44962e+05   -1.56685e+04   -2.12911e+06    1.25627e+04    1.58496e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72465e+06    3.07241e+05   -1.41740e+06   -1.87544e+06    2.99398e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10182e+02   -2.64153e+01    2.79846e-05
+
+Writing checkpoint, step 3578000 at Mon Jun 29 23:13:25 2020
+
+
+Writing checkpoint, step 3689700 at Mon Jun 29 23:28:24 2020
+
+
+Writing checkpoint, step 3801500 at Mon Jun 29 23:43:25 2020
+
+
+Writing checkpoint, step 3913200 at Mon Jun 29 23:58:24 2020
+
+
+           Step           Time
+        4000000     8000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43681e+04    8.99630e+03    6.02966e+02    9.07137e+03    1.29465e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.46561e+05   -1.56496e+04   -2.12971e+06    1.25072e+04    1.23213e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72367e+06    3.07725e+05   -1.41594e+06   -1.94176e+06    2.99869e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09677e+02    8.05714e+01    2.80830e-05
+
+Writing checkpoint, step 4025000 at Tue Jun 30 00:13:24 2020
+
+
+Writing checkpoint, step 4136700 at Tue Jun 30 00:28:24 2020
+
+
+Writing checkpoint, step 4248500 at Tue Jun 30 00:43:25 2020
+
+
+Writing checkpoint, step 4360200 at Tue Jun 30 00:58:24 2020
+
+
+Writing checkpoint, step 4472000 at Tue Jun 30 01:13:24 2020
+
+
+           Step           Time
+        4500000     9000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41946e+04    8.99505e+03    5.76168e+02    8.94302e+03    1.29689e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42503e+05   -1.56574e+04   -2.12457e+06    1.23962e+04    1.30467e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72280e+06    3.07424e+05   -1.41537e+06   -2.00817e+06    2.99577e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09885e+02    3.43188e+00    2.74268e-05
+
+Writing checkpoint, step 4583800 at Tue Jun 30 01:28:25 2020
+
+
+Writing checkpoint, step 4695600 at Tue Jun 30 01:43:25 2020
+
+
+Writing checkpoint, step 4807400 at Tue Jun 30 01:58:24 2020
+
+
+Writing checkpoint, step 4919200 at Tue Jun 30 02:13:24 2020
+
+
+           Step           Time
+        5000000    10000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41518e+04    9.19768e+03    5.91997e+02    8.92949e+03    1.30242e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43633e+05   -1.56620e+04   -2.12780e+06    1.25920e+04    1.58346e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72396e+06    3.09532e+05   -1.41443e+06   -2.07438e+06    3.01631e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10007e+02    4.69103e+01    2.69942e-05
+
+Writing checkpoint, step 5031000 at Tue Jun 30 02:28:25 2020
+
+
+Writing checkpoint, step 5142700 at Tue Jun 30 02:43:24 2020
+
+
+Writing checkpoint, step 5254400 at Tue Jun 30 02:58:24 2020
+
+
+Writing checkpoint, step 5366200 at Tue Jun 30 03:13:24 2020
+
+
+Writing checkpoint, step 5477900 at Tue Jun 30 03:28:24 2020
+
+
+           Step           Time
+        5500000    11000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41333e+04    9.11833e+03    5.79232e+02    8.89612e+03    1.29496e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44855e+05   -1.56622e+04   -2.12779e+06    1.26063e+04    1.49393e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72362e+06    3.07442e+05   -1.41618e+06   -2.14060e+06    2.99594e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10013e+02   -3.35062e+01    2.82917e-05
+
+Writing checkpoint, step 5589700 at Tue Jun 30 03:43:25 2020
+
+
+Writing checkpoint, step 5701500 at Tue Jun 30 03:58:25 2020
+
+
+Writing checkpoint, step 5813200 at Tue Jun 30 04:13:24 2020
+
+
+Writing checkpoint, step 5925000 at Tue Jun 30 04:28:24 2020
+
+
+           Step           Time
+        6000000    12000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45320e+04    9.14429e+03    5.81573e+02    8.93851e+03    1.29751e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44852e+05   -1.56749e+04   -2.12984e+06    1.24582e+04    1.61959e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72509e+06    3.07908e+05   -1.41718e+06   -2.20678e+06    3.00048e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10353e+02   -6.68472e-01    2.72053e-05
+
+Writing checkpoint, step 6036800 at Tue Jun 30 04:43:24 2020
+
+
+Writing checkpoint, step 6148600 at Tue Jun 30 04:58:25 2020
+
+
+Writing checkpoint, step 6260400 at Tue Jun 30 05:13:25 2020
+
+
+Writing checkpoint, step 6372100 at Tue Jun 30 05:28:24 2020
+
+
+Writing checkpoint, step 6483900 at Tue Jun 30 05:43:25 2020
+
+
+           Step           Time
+        6500000    13000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44957e+04    9.04893e+03    5.77326e+02    8.94168e+03    1.29796e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44324e+05   -1.56462e+04   -2.12850e+06    1.25175e+04    1.52238e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72430e+06    3.07514e+05   -1.41678e+06   -2.27279e+06    2.99664e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09585e+02    5.60370e+00    2.68975e-05
+
+Writing checkpoint, step 6595600 at Tue Jun 30 05:58:24 2020
+
+
+Writing checkpoint, step 6707400 at Tue Jun 30 06:13:24 2020
+
+
+Writing checkpoint, step 6819200 at Tue Jun 30 06:28:25 2020
+
+
+Writing checkpoint, step 6930900 at Tue Jun 30 06:43:24 2020
+
+
+           Step           Time
+        7000000    14000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41590e+04    9.11948e+03    5.47026e+02    8.98553e+03    1.29832e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43403e+05   -1.56405e+04   -2.12615e+06    1.25176e+04    1.71890e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72305e+06    3.06070e+05   -1.41698e+06   -2.33861e+06    2.98257e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09433e+02   -4.70127e+01    2.64739e-05
+
+Writing checkpoint, step 7042700 at Tue Jun 30 06:58:24 2020
+
+
+Writing checkpoint, step 7154500 at Tue Jun 30 07:13:25 2020
+
+
+Writing checkpoint, step 7266200 at Tue Jun 30 07:28:24 2020
+
+
+Writing checkpoint, step 7377900 at Tue Jun 30 07:43:24 2020
+
+
+Writing checkpoint, step 7489800 at Tue Jun 30 07:58:25 2020
+
+
+           Step           Time
+        7500000    15000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46408e+04    9.12398e+03    5.67019e+02    8.83917e+03    1.30287e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43313e+05   -1.56577e+04   -2.12493e+06    1.25649e+04    1.70500e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72108e+06    3.08594e+05   -1.41249e+06   -2.40479e+06    3.00716e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09892e+02   -6.81366e+00    2.78936e-05
+
+Writing checkpoint, step 7601500 at Tue Jun 30 08:13:24 2020
+
+
+Writing checkpoint, step 7713200 at Tue Jun 30 08:28:24 2020
+
+
+Writing checkpoint, step 7825000 at Tue Jun 30 08:43:24 2020
+
+
+Writing checkpoint, step 7936800 at Tue Jun 30 08:58:24 2020
+
+
+           Step           Time
+        8000000    16000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.40872e+04    9.14496e+03    5.47930e+02    9.03129e+03    1.29549e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41156e+05   -1.56636e+04   -2.12420e+06    1.23545e+04    1.45732e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72385e+06    3.08201e+05   -1.41565e+06   -2.47092e+06    3.00334e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10050e+02   -1.14944e+02    2.68965e-05
+
+Writing checkpoint, step 8048600 at Tue Jun 30 09:13:24 2020
+
+
+Writing checkpoint, step 8160400 at Tue Jun 30 09:28:24 2020
+
+
+Writing checkpoint, step 8272200 at Tue Jun 30 09:43:25 2020
+
+
+Writing checkpoint, step 8383900 at Tue Jun 30 09:58:24 2020
+
+
+Writing checkpoint, step 8495600 at Tue Jun 30 10:13:24 2020
+
+
+           Step           Time
+        8500000    17000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46216e+04    9.12568e+03    6.18208e+02    8.97009e+03    1.29946e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44439e+05   -1.56719e+04   -2.12830e+06    1.23189e+04    1.78622e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72375e+06    3.08520e+05   -1.41523e+06   -2.53718e+06    3.00644e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10272e+02    1.03277e+02    2.66844e-05
+
+Writing checkpoint, step 8607300 at Tue Jun 30 10:28:24 2020
+
+
+Writing checkpoint, step 8719100 at Tue Jun 30 10:43:25 2020
+
+
+Writing checkpoint, step 8830800 at Tue Jun 30 10:58:24 2020
+
+
+Writing checkpoint, step 8942600 at Tue Jun 30 11:13:25 2020
+
+
+           Step           Time
+        9000000    18000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46576e+04    9.06640e+03    5.70492e+02    8.91729e+03    1.29495e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43993e+05   -1.56561e+04   -2.12803e+06    1.25836e+04    1.50757e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72425e+06    3.09788e+05   -1.41447e+06   -2.60334e+06    3.01880e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09850e+02    1.11983e+01    2.89939e-05
+
+Writing checkpoint, step 9054300 at Tue Jun 30 11:28:24 2020
+
+
+Writing checkpoint, step 9166100 at Tue Jun 30 11:43:24 2020
+
+
+Writing checkpoint, step 9277900 at Tue Jun 30 11:58:25 2020
+
+
+Writing checkpoint, step 9389600 at Tue Jun 30 12:13:24 2020
+
+
+           Step           Time
+        9500000    19000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45344e+04    9.11106e+03    5.77620e+02    8.89012e+03    1.29536e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43864e+05   -1.56618e+04   -2.12650e+06    1.24023e+04    1.38560e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72311e+06    3.08371e+05   -1.41474e+06   -2.66965e+06    3.00499e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10001e+02    3.20050e+01    2.71455e-05
+
+Writing checkpoint, step 9501400 at Tue Jun 30 12:28:25 2020
+
+
+Writing checkpoint, step 9613100 at Tue Jun 30 12:43:24 2020
+
+
+Writing checkpoint, step 9724800 at Tue Jun 30 12:58:24 2020
+
+
+Writing checkpoint, step 9836600 at Tue Jun 30 13:13:25 2020
+
+
+Writing checkpoint, step 9948300 at Tue Jun 30 13:28:24 2020
+
+
+           Step           Time
+       10000000    20000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41568e+04    9.14771e+03    5.61785e+02    8.98720e+03    1.29769e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43352e+05   -1.56467e+04   -2.12850e+06    1.24798e+04    1.46982e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72555e+06    3.07298e+05   -1.41825e+06   -2.73596e+06    2.99453e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09599e+02   -2.27770e+01    2.72446e-05
+
+Writing checkpoint, step 10060100 at Tue Jun 30 13:43:25 2020
+
+
+Writing checkpoint, step 10171800 at Tue Jun 30 13:58:25 2020
+
+
+Writing checkpoint, step 10283500 at Tue Jun 30 14:13:24 2020
+
+
+Writing checkpoint, step 10395300 at Tue Jun 30 14:28:25 2020
+
+
+           Step           Time
+       10500000    21000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43904e+04    9.02097e+03    5.87797e+02    8.98877e+03    1.30142e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44925e+05   -1.56470e+04   -2.12924e+06    1.24968e+04    1.72764e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72416e+06    3.07435e+05   -1.41672e+06   -2.80227e+06    2.99587e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09607e+02   -1.54456e+01    2.60465e-05
+
+Writing checkpoint, step 10507100 at Tue Jun 30 14:43:25 2020
+
+
+Writing checkpoint, step 10618800 at Tue Jun 30 14:58:24 2020
+
+
+Writing checkpoint, step 10730600 at Tue Jun 30 15:13:25 2020
+
+
+Writing checkpoint, step 10842400 at Tue Jun 30 15:28:25 2020
+
+
+Writing checkpoint, step 10954100 at Tue Jun 30 15:43:25 2020
+
+
+           Step           Time
+       11000000    22000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42851e+04    9.22366e+03    5.71780e+02    8.91952e+03    1.30053e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41979e+05   -1.56372e+04   -2.12657e+06    1.24228e+04    1.60167e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72459e+06    3.08195e+05   -1.41640e+06   -2.86822e+06    3.00328e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09343e+02   -8.27729e+01    2.78936e-05
+
+Writing checkpoint, step 11065900 at Tue Jun 30 15:58:25 2020
+
+
+Writing checkpoint, step 11177600 at Tue Jun 30 16:13:24 2020
+
+
+Writing checkpoint, step 11289400 at Tue Jun 30 16:28:24 2020
+
+
+Writing checkpoint, step 11401200 at Tue Jun 30 16:43:24 2020
+
+
+           Step           Time
+       11500000    23000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41566e+04    9.05613e+03    5.49877e+02    8.96330e+03    1.30039e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44406e+05   -1.56572e+04   -2.12768e+06    1.25951e+04    1.59359e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72341e+06    3.08093e+05   -1.41532e+06   -2.93430e+06    3.00228e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09880e+02    3.78309e+01    2.71112e-05
+
+Writing checkpoint, step 11513000 at Tue Jun 30 16:58:25 2020
+
+
+Writing checkpoint, step 11624700 at Tue Jun 30 17:13:24 2020
+
+
+Writing checkpoint, step 11736400 at Tue Jun 30 17:28:25 2020
+
+
+Writing checkpoint, step 11848100 at Tue Jun 30 17:43:25 2020
+
+
+Writing checkpoint, step 11959800 at Tue Jun 30 17:58:24 2020
+
+
+           Step           Time
+       12000000    24000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46090e+04    8.99058e+03    5.25675e+02    8.83278e+03    1.29907e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44054e+05   -1.56539e+04   -2.13069e+06    1.23239e+04    1.64224e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72694e+06    3.06585e+05   -1.42036e+06   -3.00027e+06    2.98759e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09791e+02   -9.22174e+01    2.74294e-05
+
+Writing checkpoint, step 12071500 at Tue Jun 30 18:13:24 2020
+
+
+Writing checkpoint, step 12183300 at Tue Jun 30 18:28:24 2020
+
+
+Writing checkpoint, step 12295000 at Tue Jun 30 18:43:24 2020
+
+
+Writing checkpoint, step 12406800 at Tue Jun 30 18:58:24 2020
+
+
+           Step           Time
+       12500000    25000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44696e+04    9.08700e+03    5.51420e+02    9.05811e+03    1.30186e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44471e+05   -1.56403e+04   -2.12656e+06    1.25793e+04    1.63956e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72163e+06    3.09050e+05   -1.41258e+06   -3.06650e+06    3.01160e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09426e+02    9.50222e+01    2.66693e-05
+
+Writing checkpoint, step 12518600 at Tue Jun 30 19:13:25 2020
+
+
+Writing checkpoint, step 12630400 at Tue Jun 30 19:28:25 2020
+
+
+Writing checkpoint, step 12742100 at Tue Jun 30 19:43:25 2020
+
+
+Writing checkpoint, step 12853800 at Tue Jun 30 19:58:24 2020
+
+
+Writing checkpoint, step 12965500 at Tue Jun 30 20:13:24 2020
+
+
+           Step           Time
+       13000000    26000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44402e+04    8.94640e+03    5.73068e+02    8.99467e+03    1.29770e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44849e+05   -1.56349e+04   -2.12868e+06    1.25755e+04    1.37049e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72403e+06    3.06823e+05   -1.41721e+06   -3.13285e+06    2.98991e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09282e+02    7.01544e+01    2.76947e-05
+
+Writing checkpoint, step 13077200 at Tue Jun 30 20:28:24 2020
+
+
+Writing checkpoint, step 13188900 at Tue Jun 30 20:43:24 2020
+
+
+Writing checkpoint, step 13300700 at Tue Jun 30 20:58:24 2020
+
+
+Writing checkpoint, step 13412400 at Tue Jun 30 21:13:24 2020
+
+
+           Step           Time
+       13500000    27000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43648e+04    9.12132e+03    5.42307e+02    8.86734e+03    1.29789e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44001e+05   -1.56457e+04   -2.12848e+06    1.24179e+04    1.26420e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72489e+06    3.06616e+05   -1.41828e+06   -3.19922e+06    2.98788e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09573e+02   -2.72408e+01    2.72668e-05
+
+Writing checkpoint, step 13524200 at Tue Jun 30 21:28:25 2020
+
+
+Writing checkpoint, step 13635900 at Tue Jun 30 21:43:24 2020
+
+
+Writing checkpoint, step 13747600 at Tue Jun 30 21:58:24 2020
+
+
+Writing checkpoint, step 13859300 at Tue Jun 30 22:13:24 2020
+
+
+Writing checkpoint, step 13971000 at Tue Jun 30 22:28:24 2020
+
+
+           Step           Time
+       14000000    28000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42369e+04    9.07662e+03    5.64282e+02    8.87583e+03    1.29950e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44701e+05   -1.56609e+04   -2.12912e+06    1.25330e+04    1.80100e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72466e+06    3.08736e+05   -1.41593e+06   -3.26557e+06    3.00855e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09978e+02   -1.50897e+01    2.79803e-05
+
+Writing checkpoint, step 14082800 at Tue Jun 30 22:43:25 2020
+
+
+Writing checkpoint, step 14194500 at Tue Jun 30 22:58:25 2020
+
+
+Writing checkpoint, step 14306200 at Tue Jun 30 23:13:24 2020
+
+
+Writing checkpoint, step 14418000 at Tue Jun 30 23:28:25 2020
+
+
+           Step           Time
+       14500000    29000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.40421e+04    9.14386e+03    6.10530e+02    9.03612e+03    1.30174e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.45344e+05   -1.56508e+04   -2.12776e+06    1.25468e+04    1.71766e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72234e+06    3.08847e+05   -1.41349e+06   -3.33183e+06    3.00963e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09709e+02    8.78885e+01    2.78739e-05
+
+Writing checkpoint, step 14529700 at Tue Jun 30 23:43:24 2020
+
+
+Writing checkpoint, step 14641500 at Tue Jun 30 23:58:25 2020
+
+
+Writing checkpoint, step 14753200 at Wed Jul  1 00:13:25 2020
+
+
+Writing checkpoint, step 14864900 at Wed Jul  1 00:28:24 2020
+
+
+Writing checkpoint, step 14976700 at Wed Jul  1 00:43:25 2020
+
+
+           Step           Time
+       15000000    30000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41370e+04    9.17576e+03    5.94987e+02    9.00167e+03    1.30122e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42398e+05   -1.56316e+04   -2.12646e+06    1.25970e+04    1.70935e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72389e+06    3.07666e+05   -1.41622e+06   -3.39803e+06    2.99812e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09196e+02   -5.60623e+01    2.76667e-05
+
+Writing checkpoint, step 15088400 at Wed Jul  1 00:58:24 2020
+
+
+Writing checkpoint, step 15200100 at Wed Jul  1 01:13:24 2020
+
+
+Writing checkpoint, step 15311800 at Wed Jul  1 01:28:24 2020
+
+
+Writing checkpoint, step 15423500 at Wed Jul  1 01:43:24 2020
+
+
+           Step           Time
+       15500000    31000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41703e+04    9.10914e+03    6.22914e+02    8.98707e+03    1.30059e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43507e+05   -1.56561e+04   -2.12754e+06    1.25816e+04    1.35926e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72402e+06    3.09604e+05   -1.41442e+06   -3.46445e+06    3.01700e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09849e+02   -1.73522e+01    2.73947e-05
+
+Writing checkpoint, step 15535300 at Wed Jul  1 01:58:25 2020
+
+
+Writing checkpoint, step 15647000 at Wed Jul  1 02:13:24 2020
+
+
+Writing checkpoint, step 15758800 at Wed Jul  1 02:28:25 2020
+
+
+Writing checkpoint, step 15870600 at Wed Jul  1 02:43:25 2020
+
+
+Writing checkpoint, step 15982300 at Wed Jul  1 02:58:24 2020
+
+
+           Step           Time
+       16000000    32000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44547e+04    8.98919e+03    5.50957e+02    9.15172e+03    1.29745e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44451e+05   -1.56524e+04   -2.12738e+06    1.25618e+04    1.47538e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72298e+06    3.09365e+05   -1.41362e+06   -3.53095e+06    3.01468e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09751e+02    7.85977e+01    2.78043e-05
+
+Writing checkpoint, step 16094100 at Wed Jul  1 03:13:25 2020
+
+
+Writing checkpoint, step 16205800 at Wed Jul  1 03:28:24 2020
+
+
+Writing checkpoint, step 16317600 at Wed Jul  1 03:43:25 2020
+
+
+Writing checkpoint, step 16429300 at Wed Jul  1 03:58:24 2020
+
+
+           Step           Time
+       16500000    33000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44964e+04    8.97458e+03    5.59760e+02    9.01998e+03    1.30283e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44979e+05   -1.56559e+04   -2.12777e+06    1.26007e+04    1.57217e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72236e+06    3.07617e+05   -1.41474e+06   -3.59734e+06    2.99765e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09845e+02    8.40971e+01    2.66464e-05
+
+Writing checkpoint, step 16541100 at Wed Jul  1 04:13:24 2020
+
+
+Writing checkpoint, step 16652800 at Wed Jul  1 04:28:24 2020
+
+
+Writing checkpoint, step 16764600 at Wed Jul  1 04:43:24 2020
+
+
+Writing checkpoint, step 16876300 at Wed Jul  1 04:58:24 2020
+
+
+Writing checkpoint, step 16988000 at Wed Jul  1 05:13:24 2020
+
+
+           Step           Time
+       17000000    34000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42180e+04    9.02555e+03    5.45621e+02    8.81196e+03    1.29649e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42919e+05   -1.56539e+04   -2.12836e+06    1.24235e+04    1.47325e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72627e+06    3.07751e+05   -1.41852e+06   -3.66394e+06    2.99895e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09791e+02   -6.78841e+01    2.76451e-05
+
+Writing checkpoint, step 17099800 at Wed Jul  1 05:28:25 2020
+
+
+Writing checkpoint, step 17211500 at Wed Jul  1 05:43:25 2020
+
+
+Writing checkpoint, step 17323200 at Wed Jul  1 05:58:24 2020
+
+
+Writing checkpoint, step 17434900 at Wed Jul  1 06:13:24 2020
+
+
+           Step           Time
+       17500000    35000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44805e+04    9.00270e+03    5.43277e+02    8.91329e+03    1.29661e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43555e+05   -1.56752e+04   -2.12712e+06    1.24231e+04    1.36831e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72407e+06    3.06542e+05   -1.41753e+06   -3.73028e+06    2.98717e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10362e+02    2.74159e+01    2.66732e-05
+
+Writing checkpoint, step 17546700 at Wed Jul  1 06:28:24 2020
+
+
+Writing checkpoint, step 17658500 at Wed Jul  1 06:43:24 2020
+
+
+Writing checkpoint, step 17770200 at Wed Jul  1 06:58:24 2020
+
+
+Writing checkpoint, step 17882000 at Wed Jul  1 07:13:24 2020
+
+
+Writing checkpoint, step 17993800 at Wed Jul  1 07:28:25 2020
+
+
+           Step           Time
+       18000000    36000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41693e+04    8.93902e+03    5.13907e+02    9.04162e+03    1.29815e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41027e+05   -1.56744e+04   -2.12514e+06    1.25812e+04    1.49679e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72458e+06    3.07620e+05   -1.41696e+06   -3.79688e+06    2.99768e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10339e+02   -1.53302e+02    2.70949e-05
+
+Writing checkpoint, step 18105500 at Wed Jul  1 07:43:25 2020
+
+
+Writing checkpoint, step 18217200 at Wed Jul  1 07:58:24 2020
+
+
+Writing checkpoint, step 18329000 at Wed Jul  1 08:13:25 2020
+
+
+Writing checkpoint, step 18440700 at Wed Jul  1 08:28:25 2020
+
+
+           Step           Time
+       18500000    37000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42090e+04    9.09271e+03    5.79712e+02    8.95900e+03    1.29879e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43353e+05   -1.56514e+04   -2.12851e+06    1.25268e+04    1.86783e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72537e+06    3.07605e+05   -1.41777e+06   -3.86314e+06    2.99753e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09723e+02   -6.34038e+01    2.66536e-05
+
+Writing checkpoint, step 18552400 at Wed Jul  1 08:43:24 2020
+
+
+Writing checkpoint, step 18664200 at Wed Jul  1 08:58:24 2020
+
+
+Writing checkpoint, step 18776000 at Wed Jul  1 09:13:25 2020
+
+
+Writing checkpoint, step 18887700 at Wed Jul  1 09:28:24 2020
+
+
+Writing checkpoint, step 18999500 at Wed Jul  1 09:43:24 2020
+
+
+           Step           Time
+       19000000    38000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45876e+04    9.05966e+03    6.03635e+02    8.97082e+03    1.29775e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.45190e+05   -1.56702e+04   -2.12984e+06    1.24100e+04    1.34581e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72478e+06    3.07245e+05   -1.41753e+06   -3.92905e+06    2.99401e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10227e+02    5.16583e+01    2.72317e-05
+
+Writing checkpoint, step 19111300 at Wed Jul  1 09:58:25 2020
+
+
+Writing checkpoint, step 19223000 at Wed Jul  1 10:13:25 2020
+
+
+Writing checkpoint, step 19334700 at Wed Jul  1 10:28:25 2020
+
+
+Writing checkpoint, step 19446400 at Wed Jul  1 10:43:25 2020
+
+
+           Step           Time
+       19500000    39000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41590e+04    9.05898e+03    6.02142e+02    9.07889e+03    1.30027e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41994e+05   -1.56354e+04   -2.12413e+06    1.23821e+04    1.69851e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72230e+06    3.07755e+05   -1.41454e+06   -3.99495e+06    2.99899e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09295e+02    1.98049e+01    2.59723e-05
+
+Writing checkpoint, step 19558100 at Wed Jul  1 10:58:24 2020
+
+
+Writing checkpoint, step 19669900 at Wed Jul  1 11:13:25 2020
+
+
+Writing checkpoint, step 19781600 at Wed Jul  1 11:28:24 2020
+
+
+Writing checkpoint, step 19893400 at Wed Jul  1 11:43:25 2020
+
+
+           Step           Time
+       20000000    40000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43818e+04    8.90552e+03    5.85049e+02    8.97865e+03    1.29743e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43338e+05   -1.56841e+04   -2.12882e+06    1.23574e+04    1.45992e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72607e+06    3.08780e+05   -1.41729e+06   -4.06123e+06    3.00898e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10601e+02   -2.28158e+01    2.71916e-05
+
+Writing checkpoint, step 20005100 at Wed Jul  1 11:58:24 2020
+
+
+Writing checkpoint, step 20116800 at Wed Jul  1 12:13:24 2020
+
+
+Writing checkpoint, step 20228500 at Wed Jul  1 12:28:24 2020
+
+
+Writing checkpoint, step 20340200 at Wed Jul  1 12:43:24 2020
+
+
+Writing checkpoint, step 20452000 at Wed Jul  1 12:58:25 2020
+
+
+           Step           Time
+       20500000    41000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43926e+04    9.09126e+03    5.80348e+02    8.94829e+03    1.30009e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42203e+05   -1.56591e+04   -2.12464e+06    1.24167e+04    1.87498e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72247e+06    3.09590e+05   -1.41288e+06   -4.12761e+06    3.01687e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09931e+02   -7.51160e+01    2.86071e-05
+
+Writing checkpoint, step 20563600 at Wed Jul  1 13:13:24 2020
+
+
+Writing checkpoint, step 20675400 at Wed Jul  1 13:28:25 2020
+
+
+Writing checkpoint, step 20787100 at Wed Jul  1 13:43:24 2020
+
+
+Writing checkpoint, step 20898900 at Wed Jul  1 13:58:24 2020
+
+
+           Step           Time
+       21000000    42000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43113e+04    9.25504e+03    5.57290e+02    8.94621e+03    1.30095e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41854e+05   -1.56613e+04   -2.12488e+06    1.24934e+04    1.30520e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72290e+06    3.08917e+05   -1.41398e+06   -4.19413e+06    3.01031e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09989e+02   -4.45230e+01    2.77939e-05
+
+Writing checkpoint, step 21010600 at Wed Jul  1 14:13:24 2020
+
+
+Writing checkpoint, step 21122400 at Wed Jul  1 14:28:24 2020
+
+
+Writing checkpoint, step 21234200 at Wed Jul  1 14:43:25 2020
+
+
+Writing checkpoint, step 21345900 at Wed Jul  1 14:58:24 2020
+
+
+Writing checkpoint, step 21457600 at Wed Jul  1 15:13:24 2020
+
+
+           Step           Time
+       21500000    43000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.48560e+04    8.93106e+03    5.70430e+02    9.04115e+03    1.29771e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41826e+05   -1.56662e+04   -2.12469e+06    1.26551e+04    1.50803e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72256e+06    3.06890e+05   -1.41567e+06   -4.26061e+06    2.99055e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10120e+02   -2.98507e+01    2.65564e-05
+
+Writing checkpoint, step 21569400 at Wed Jul  1 15:28:25 2020
+
+
+Writing checkpoint, step 21681100 at Wed Jul  1 15:43:24 2020
+
+
+Writing checkpoint, step 21792800 at Wed Jul  1 15:58:24 2020
+
+
+Writing checkpoint, step 21904500 at Wed Jul  1 16:13:24 2020
+
+
+           Step           Time
+       22000000    44000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43585e+04    9.21758e+03    5.90210e+02    8.86705e+03    1.29861e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44663e+05   -1.56553e+04   -2.12841e+06    1.24935e+04    1.53941e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72386e+06    3.07953e+05   -1.41591e+06   -4.32693e+06    3.00092e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09828e+02    9.70467e+00    2.79234e-05
+
+Writing checkpoint, step 22016300 at Wed Jul  1 16:28:25 2020
+
+
+Writing checkpoint, step 22128000 at Wed Jul  1 16:43:24 2020
+
+
+Writing checkpoint, step 22239800 at Wed Jul  1 16:58:25 2020
+
+
+Writing checkpoint, step 22351500 at Wed Jul  1 17:13:24 2020
+
+
+Writing checkpoint, step 22463200 at Wed Jul  1 17:28:24 2020
+
+
+           Step           Time
+       22500000    45000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43098e+04    9.18742e+03    6.10403e+02    8.91130e+03    1.29765e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43568e+05   -1.56603e+04   -2.12579e+06    1.24497e+04    1.26334e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72252e+06    3.08510e+05   -1.41401e+06   -4.39339e+06    3.00634e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09962e+02    2.19771e+01    2.76794e-05
+
+Writing checkpoint, step 22575000 at Wed Jul  1 17:43:25 2020
+
+
+Writing checkpoint, step 22686800 at Wed Jul  1 17:58:25 2020
+
+
+Writing checkpoint, step 22798400 at Wed Jul  1 18:13:24 2020
+
+
+Writing checkpoint, step 22910200 at Wed Jul  1 18:28:25 2020
+
+
+           Step           Time
+       23000000    46000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42615e+04    9.03930e+03    5.76150e+02    9.04478e+03    1.30127e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44216e+05   -1.56615e+04   -2.12921e+06    1.23418e+04    1.35509e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72513e+06    3.08267e+05   -1.41686e+06   -4.45984e+06    3.00398e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09995e+02   -8.49226e+00    2.76000e-05
+
+Writing checkpoint, step 23021900 at Wed Jul  1 18:43:24 2020
+
+
+Writing checkpoint, step 23133700 at Wed Jul  1 18:58:25 2020
+
+
+Writing checkpoint, step 23245400 at Wed Jul  1 19:13:24 2020
+
+
+Writing checkpoint, step 23357100 at Wed Jul  1 19:28:24 2020
+
+
+Writing checkpoint, step 23468800 at Wed Jul  1 19:43:24 2020
+
+
+           Step           Time
+       23500000    47000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45796e+04    9.08929e+03    5.59245e+02    8.97572e+03    1.29498e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43192e+05   -1.56612e+04   -2.12465e+06    1.26860e+04    1.52969e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72158e+06    3.08259e+05   -1.41332e+06   -4.52610e+06    3.00390e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09988e+02   -2.99979e+01    2.82800e-05
+
+Writing checkpoint, step 23580500 at Wed Jul  1 19:58:24 2020
+
+
+Writing checkpoint, step 23692200 at Wed Jul  1 20:13:24 2020
+
+
+Writing checkpoint, step 23804000 at Wed Jul  1 20:28:25 2020
+
+
+Writing checkpoint, step 23915600 at Wed Jul  1 20:43:24 2020
+
+
+           Step           Time
+       24000000    48000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44767e+04    9.23114e+03    5.42973e+02    9.05273e+03    1.30151e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42983e+05   -1.56544e+04   -2.12800e+06    1.24645e+04    1.56897e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72459e+06    3.07163e+05   -1.41743e+06   -4.59220e+06    2.99322e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09803e+02   -6.85227e+01    2.74646e-05
+
+Writing checkpoint, step 24027400 at Wed Jul  1 20:58:25 2020
+
+
+Writing checkpoint, step 24139100 at Wed Jul  1 21:13:24 2020
+
+
+Writing checkpoint, step 24250900 at Wed Jul  1 21:28:25 2020
+
+
+Writing checkpoint, step 24362600 at Wed Jul  1 21:43:24 2020
+
+
+Writing checkpoint, step 24474300 at Wed Jul  1 21:58:24 2020
+
+
+           Step           Time
+       24500000    49000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42398e+04    9.22653e+03    5.63685e+02    9.04794e+03    1.29749e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43726e+05   -1.56432e+04   -2.12771e+06    1.25827e+04    1.26451e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72409e+06    3.08135e+05   -1.41596e+06   -4.65826e+06    3.00270e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09504e+02    7.22498e+01    2.58574e-05
+
+Writing checkpoint, step 24586000 at Wed Jul  1 22:13:24 2020
+
+
+Writing checkpoint, step 24697700 at Wed Jul  1 22:28:24 2020
+
+
+Writing checkpoint, step 24809400 at Wed Jul  1 22:43:24 2020
+
+
+Writing checkpoint, step 24921100 at Wed Jul  1 22:58:24 2020
+
+
+           Step           Time
+       25000000    50000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46209e+04    9.11337e+03    6.11733e+02    8.90101e+03    1.30093e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42289e+05   -1.56605e+04   -2.12399e+06    1.24049e+04    1.46365e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72147e+06    3.08147e+05   -1.41332e+06   -4.72442e+06    3.00280e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09967e+02   -4.91246e+01    2.81118e-05
+
+Writing checkpoint, step 25032800 at Wed Jul  1 23:13:24 2020
+
+
+Writing checkpoint, step 25144500 at Wed Jul  1 23:28:24 2020
+
+
+Writing checkpoint, step 25256300 at Wed Jul  1 23:43:24 2020
+
+
+Writing checkpoint, step 25368100 at Wed Jul  1 23:58:25 2020
+
+
+Writing checkpoint, step 25479800 at Thu Jul  2 00:13:24 2020
+
+
+           Step           Time
+       25500000    51000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42843e+04    9.01172e+03    5.64956e+02    9.03720e+03    1.30117e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43102e+05   -1.56462e+04   -2.12762e+06    1.24026e+04    1.51909e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72459e+06    3.06508e+05   -1.41809e+06   -4.79038e+06    2.98684e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09584e+02   -1.29118e+01    2.69602e-05
+
+Writing checkpoint, step 25591500 at Thu Jul  2 00:28:25 2020
+
+
+Writing checkpoint, step 25703100 at Thu Jul  2 00:43:24 2020
+
+
+Writing checkpoint, step 25814800 at Thu Jul  2 00:58:24 2020
+
+
+Writing checkpoint, step 25926500 at Thu Jul  2 01:13:24 2020
+
+
+           Step           Time
+       26000000    52000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46224e+04    9.41149e+03    6.46320e+02    8.89996e+03    1.29797e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.41316e+05   -1.56722e+04   -2.12492e+06    1.22826e+04    1.75808e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72344e+06    3.07614e+05   -1.41583e+06   -4.85653e+06    2.99761e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10282e+02   -5.05418e+01    2.80968e-05
+
+Writing checkpoint, step 26038200 at Thu Jul  2 01:28:25 2020
+
+
+Writing checkpoint, step 26149900 at Thu Jul  2 01:43:24 2020
+
+
+Writing checkpoint, step 26261600 at Thu Jul  2 01:58:24 2020
+
+
+Writing checkpoint, step 26373400 at Thu Jul  2 02:13:25 2020
+
+
+Writing checkpoint, step 26485000 at Thu Jul  2 02:28:24 2020
+
+
+           Step           Time
+       26500000    53000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43149e+04    9.26390e+03    5.73130e+02    9.02952e+03    1.30023e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.46022e+05   -1.56620e+04   -2.12966e+06    1.23573e+04    1.68259e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72357e+06    3.07589e+05   -1.41598e+06   -4.92257e+06    2.99737e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10007e+02    1.14210e+02    2.72957e-05
+
+Writing checkpoint, step 26596800 at Thu Jul  2 02:43:25 2020
+
+
+Writing checkpoint, step 26708500 at Thu Jul  2 02:58:25 2020
+
+
+Writing checkpoint, step 26820200 at Thu Jul  2 03:13:25 2020
+
+
+Writing checkpoint, step 26931900 at Thu Jul  2 03:28:25 2020
+
+
+           Step           Time
+       27000000    54000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41960e+04    9.11987e+03    5.59080e+02    9.04960e+03    1.29732e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43990e+05   -1.56588e+04   -2.12757e+06    1.23720e+04    1.98973e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72401e+06    3.08512e+05   -1.41550e+06   -4.98850e+06    3.00637e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09921e+02    5.72735e+01    2.72489e-05
+
+Writing checkpoint, step 27043600 at Thu Jul  2 03:43:24 2020
+
+
+Writing checkpoint, step 27155300 at Thu Jul  2 03:58:24 2020
+
+
+Writing checkpoint, step 27267100 at Thu Jul  2 04:13:24 2020
+
+
+Writing checkpoint, step 27378800 at Thu Jul  2 04:28:24 2020
+
+
+Writing checkpoint, step 27490500 at Thu Jul  2 04:43:24 2020
+
+
+           Step           Time
+       27500000    55000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44655e+04    9.15187e+03    5.00290e+02    8.86402e+03    1.29735e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43342e+05   -1.56534e+04   -2.12606e+06    1.24009e+04    1.45754e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72311e+06    3.08451e+05   -1.41465e+06   -5.05456e+06    3.00578e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09777e+02   -3.24462e+01    2.84484e-05
+
+Writing checkpoint, step 27602300 at Thu Jul  2 04:58:25 2020
+
+
+Writing checkpoint, step 27714000 at Thu Jul  2 05:13:24 2020
+
+
+Writing checkpoint, step 27825700 at Thu Jul  2 05:28:24 2020
+
+
+Writing checkpoint, step 27937400 at Thu Jul  2 05:43:24 2020
+
+
+           Step           Time
+       28000000    56000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41733e+04    9.11302e+03    5.61503e+02    9.01274e+03    1.29739e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43651e+05   -1.56451e+04   -2.12562e+06    1.25062e+04    1.65723e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72234e+06    3.06899e+05   -1.41544e+06   -5.12048e+06    2.99065e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09555e+02   -2.95329e+01    2.69335e-05
+
+Writing checkpoint, step 28049100 at Thu Jul  2 05:58:24 2020
+
+
+Writing checkpoint, step 28160900 at Thu Jul  2 06:13:25 2020
+
+
+Writing checkpoint, step 28272600 at Thu Jul  2 06:28:24 2020
+
+
+Writing checkpoint, step 28384300 at Thu Jul  2 06:43:24 2020
+
+
+Writing checkpoint, step 28496100 at Thu Jul  2 06:58:25 2020
+
+
+           Step           Time
+       28500000    57000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42330e+04    9.12584e+03    6.17227e+02    9.04166e+03    1.30106e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44306e+05   -1.56753e+04   -2.12915e+06    1.23695e+04    1.63915e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72486e+06    3.08147e+05   -1.41672e+06   -5.18643e+06    3.00281e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10363e+02    5.24433e+01    2.59871e-05
+
+Writing checkpoint, step 28607800 at Thu Jul  2 07:13:24 2020
+
+
+Writing checkpoint, step 28719600 at Thu Jul  2 07:28:25 2020
+
+
+Writing checkpoint, step 28831200 at Thu Jul  2 07:43:24 2020
+
+
+Writing checkpoint, step 28942900 at Thu Jul  2 07:58:24 2020
+
+
+           Step           Time
+       29000000    58000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41047e+04    9.19098e+03    5.67068e+02    9.03081e+03    1.29905e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42889e+05   -1.56731e+04   -2.12779e+06    1.25607e+04    1.82178e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72503e+06    3.07411e+05   -1.41762e+06   -5.25245e+06    2.99563e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10305e+02    1.19133e+01    2.70417e-05
+
+Writing checkpoint, step 29054500 at Thu Jul  2 08:13:24 2020
+
+
+Writing checkpoint, step 29166200 at Thu Jul  2 08:28:24 2020
+
+
+Writing checkpoint, step 29277800 at Thu Jul  2 08:43:24 2020
+
+
+Writing checkpoint, step 29389500 at Thu Jul  2 08:58:24 2020
+
+
+           Step           Time
+       29500000    59000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.40854e+04    9.17170e+03    5.75127e+02    8.98648e+03    1.29479e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43814e+05   -1.56646e+04   -2.12657e+06    1.22963e+04    1.83271e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72364e+06    3.05960e+05   -1.41768e+06   -5.31840e+06    2.98150e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10077e+02   -2.07596e+00    2.72356e-05
+
+Writing checkpoint, step 29501200 at Thu Jul  2 09:13:24 2020
+
+
+Writing checkpoint, step 29612900 at Thu Jul  2 09:28:24 2020
+
+
+Writing checkpoint, step 29724600 at Thu Jul  2 09:43:24 2020
+
+
+Writing checkpoint, step 29836400 at Thu Jul  2 09:58:25 2020
+
+
+Writing checkpoint, step 29948000 at Thu Jul  2 10:13:24 2020
+
+
+           Step           Time
+       30000000    60000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43112e+04    9.14111e+03    5.81713e+02    9.03697e+03    1.29906e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44247e+05   -1.56573e+04   -2.12764e+06    1.26166e+04    1.83249e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72327e+06    3.08000e+05   -1.41527e+06   -5.38449e+06    3.00138e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09881e+02    6.83382e+01    2.70076e-05
+
+Writing checkpoint, step 30059700 at Thu Jul  2 10:28:24 2020
+
+
+Writing checkpoint, step 30171400 at Thu Jul  2 10:43:25 2020
+
+
+Writing checkpoint, step 30283000 at Thu Jul  2 10:58:24 2020
+
+
+Writing checkpoint, step 30394700 at Thu Jul  2 11:13:24 2020
+
+
+           Step           Time
+       30500000    61000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.40929e+04    9.16039e+03    5.32586e+02    8.80025e+03    1.29562e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.44739e+05   -1.56586e+04   -2.12814e+06    1.23435e+04    1.50518e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72442e+06    3.07901e+05   -1.41651e+06   -5.45051e+06    3.00041e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09916e+02   -2.07499e+01    2.81293e-05
+
+Writing checkpoint, step 30506500 at Thu Jul  2 11:28:25 2020
+
+
+Writing checkpoint, step 30618200 at Thu Jul  2 11:43:24 2020
+
+
+Writing checkpoint, step 30729900 at Thu Jul  2 11:58:25 2020
+
+
+Writing checkpoint, step 30841600 at Thu Jul  2 12:13:24 2020
+
+
+Writing checkpoint, step 30953300 at Thu Jul  2 12:28:24 2020
+
+
+           Step           Time
+       31000000    62000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42776e+04    9.10507e+03    5.99761e+02    8.89750e+03    1.29997e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43112e+05   -1.56825e+04   -2.12776e+06    1.24303e+04    2.11710e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72481e+06    3.07936e+05   -1.41687e+06   -5.51663e+06    3.00076e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10558e+02   -2.81835e+01    2.72562e-05
+
+Writing checkpoint, step 31065000 at Thu Jul  2 12:43:25 2020
+
+
+Writing checkpoint, step 31176600 at Thu Jul  2 12:58:24 2020
+
+
+Writing checkpoint, step 31288300 at Thu Jul  2 13:13:24 2020
+
+
+Writing checkpoint, step 31399900 at Thu Jul  2 13:28:24 2020
+
+
+           Step           Time
+       31500000    63000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43470e+04    9.13986e+03    5.29389e+02    9.04991e+03    1.29960e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.43026e+05   -1.56577e+04   -2.12757e+06    1.25147e+04    1.62348e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72450e+06    3.08002e+05   -1.41650e+06   -5.58252e+06    3.00139e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.09893e+02   -6.95686e+00    2.77312e-05
+
+Writing checkpoint, step 31511700 at Thu Jul  2 13:43:25 2020
+
+
+Writing checkpoint, step 31623300 at Thu Jul  2 13:58:25 2020
+
+
+Writing checkpoint, step 31735000 at Thu Jul  2 14:13:24 2020
+
+
+Writing checkpoint, step 31846700 at Thu Jul  2 14:28:24 2020
+
+
+Writing checkpoint, step 31958400 at Thu Jul  2 14:43:24 2020
+
+
+           Step           Time
+       32000000    64000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45554e+04    9.04012e+03    6.37422e+02    8.99380e+03    1.29752e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.42379e+05   -1.56645e+04   -2.12505e+06    1.25777e+04    1.29782e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.72265e+06    3.07576e+05   -1.41507e+06   -5.64844e+06    2.99724e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -2.10074e+02   -2.18559e+00    2.71519e-05
+
+Writing checkpoint, step 32070000 at Thu Jul  2 14:58:24 2020
+
+
+Writing checkpoint, step 32181700 at Thu Jul  2 15:13:25 2020
+
+
+Writing checkpoint, step 32293400 at Thu Jul  2 15:28:24 2020
+
+
+Writing checkpoint, step 32405100 at Thu Jul  2 15:43:24 2020
+
+
+
+Reading checkpoint file state.cpt
+  file generated by:     /usr/local/gromacs/bin/gmx
+  file generated at:     Thu Jul  2 15:43:24 2020
+
+  GROMACS double prec.:  0
+  simulation part #:     1
+  step:                  32405100
+  time:                  64810.200000
+
+  Version mismatch,
+    current program: 2020
+    checkpoint file: 2019.6
+
+The current GROMACS major version is not identical to the one that
+generated the checkpoint file. In principle GROMACS does not support
+continuation from checkpoints between different versions, so we advise
+against this. If you still want to try your luck we recommend that you use
+the -noappend flag to keep your output files from the two versions separate.
+This might also work around errors where the output fields in the energy
+file have changed between the different versions.
+
+
+
+-----------------------------------------------------------
+Restarting from checkpoint, appending to previous log file.
+
+                       :-) GROMACS - gmx mdrun, 2020 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/marie/GIT_COVID19/cov2-s-pep/HR2_6_12_306_full_prod_restart_try1
+Process ID:   16602
+Command line:
+  gmx mdrun -s md.tpr -cpi state.cpt -append -gpu_id 1
+
+GROMACS version:    2020
+Verified release checksum is c8f31ed8bc66001c3c8d6e5ddb61aab8bb1d400b5f5dba93c53473fa79c1a50a
+Precision:          single
+Memory model:       64 bit
+MPI library:        thread_mpi
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        CUDA
+SIMD instructions:  AVX2_256
+FFT library:        fftw-3.3.8-sse2-avx-avx2-avx2_128
+RDTSCP usage:       enabled
+TNG support:        enabled
+Hwloc support:      hwloc-1.11.6
+Tracing support:    disabled
+C compiler:         /usr/bin/cc GNU 7.4.0
+C compiler flags:   -mavx2 -mfma -fexcess-precision=fast -funroll-all-loops -fopenmp
+C++ compiler:       /usr/bin/c++ GNU 7.4.0
+C++ compiler flags: -mavx2 -mfma -fexcess-precision=fast -funroll-all-loops -fopenmp
+CUDA compiler:      /usr/local/cuda-10.1/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2019 NVIDIA Corporation;Built on Sun_Jul_28_19:07:16_PDT_2019;Cuda compilation tools, release 10.1, V10.1.243
+CUDA compiler flags:-std=c++14;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_35,code=compute_35;-gencode;arch=compute_50,code=compute_50;-gencode;arch=compute_52,code=compute_52;-gencode;arch=compute_60,code=compute_60;-gencode;arch=compute_61,code=compute_61;-gencode;arch=compute_70,code=compute_70;-gencode;arch=compute_75,code=compute_75;-use_fast_math;-D_FORCE_INLINES;-mavx2 -mfma -fexcess-precision=fast -funroll-all-loops -fopenmp
+CUDA driver:        10.10
+CUDA runtime:       10.10
+
+Changing nstlist from 10 to 100, rlist from 1 to 1.157
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:1,PME:1
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 20 OpenMP threads 
+
+System total charge: 0.000
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.320163 nm for Ewald
+Potential shift: LJ r^-12: -1.000e+00 r^-6: -1.000e+00, Ewald -1.000e-05
+Initialized non-bonded Coulomb Ewald tables, spacing: 9.33e-04 size: 1073
+
+Generated table with 1078 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1078 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1078 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+
+Using GPU 8x8 nonbonded short-range kernels
+
+Using a dual 8x8 pair-list setup updated with dynamic, rolling pruning:
+  outer list: updated every 100 steps, buffer 0.157 nm, rlist 1.157 nm
+  inner list: updated every  10 steps, buffer 0.001 nm, rlist 1.001 nm
+At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
+  outer list: updated every 100 steps, buffer 0.305 nm, rlist 1.305 nm
+  inner list: updated every  10 steps, buffer 0.042 nm, rlist 1.042 nm
+
+Using Lorentz-Berthelot Lennard-Jones combination rule
+
+Long Range LJ corr.: <C6> 2.0070e-03
+
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 6468
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+There are: 123280 Atoms
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+
+Started mdrun on rank 0 Fri Jul  3 18:59:55 2020
+
+step 32406200: timed with pme grid 84 64 56, coulomb cutoff 1.000: 659.2 M-cycles
+step 32406400: timed with pme grid 80 56 48, coulomb cutoff 1.158: 766.3 M-cycles
+step 32406600: timed with pme grid 80 56 52, coulomb cutoff 1.140: 1225.1 M-cycles
+step 32406800: timed with pme grid 80 60 52, coulomb cutoff 1.069: 841.8 M-cycles
+step 32407000: timed with pme grid 80 60 56, coulomb cutoff 1.067: 1339.6 M-cycles
+step 32407200: timed with pme grid 84 64 56, coulomb cutoff 1.000: 1717.5 M-cycles
+              optimal pme grid 84 64 56, coulomb cutoff 1.000
+           Step           Time
+       32500000    65000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42816e+04    9.17659e+03    5.51572e+02    9.05251e+03    1.29914e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.55661e+05   -1.08858e+05   -2.15797e+06    1.18255e+04    1.26976e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83624e+06    3.07911e+05   -1.52833e+06   -5.80757e+06    3.00050e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54361e+03   -3.18707e+01    2.72038e-05
+
+Writing checkpoint, step 32579200 at Fri Jul  3 19:14:58 2020
+
+
+Writing checkpoint, step 32782800 at Fri Jul  3 19:29:55 2020
+
+
+Writing checkpoint, step 32963900 at Fri Jul  3 19:44:55 2020
+
+
+           Step           Time
+       33000000    66000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.39070e+04    9.09156e+03    5.77072e+02    8.88921e+03    1.29813e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57546e+05   -1.08981e+05   -2.16016e+06    1.16538e+04    1.81535e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83749e+06    3.07654e+05   -1.52983e+06   -5.87396e+06    2.99800e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54709e+03   -8.14900e+01    2.74305e-05
+
+Writing checkpoint, step 33092200 at Fri Jul  3 19:59:55 2020
+
+
+Writing checkpoint, step 33241400 at Fri Jul  3 20:14:55 2020
+
+
+Writing checkpoint, step 33454300 at Fri Jul  3 20:29:55 2020
+
+
+           Step           Time
+       33500000    67000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43416e+04    9.19889e+03    6.05292e+02    9.00047e+03    1.29754e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57146e+05   -1.08903e+05   -2.15661e+06    1.17059e+04    1.42121e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83362e+06    3.08198e+05   -1.52542e+06   -5.94003e+06    3.00331e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54490e+03    1.23861e+02    2.66536e-05
+
+Writing checkpoint, step 33664400 at Fri Jul  3 20:44:55 2020
+
+
+Writing checkpoint, step 33877500 at Fri Jul  3 20:59:55 2020
+
+
+           Step           Time
+       34000000    68000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45885e+04    9.00713e+03    5.78675e+02    9.03406e+03    1.29995e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56006e+05   -1.08920e+05   -2.15776e+06    1.17035e+04    1.47280e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83562e+06    3.09336e+05   -1.52628e+06   -6.00635e+06    3.01440e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54537e+03   -3.61337e+01    2.69702e-05
+
+Writing checkpoint, step 34053600 at Fri Jul  3 21:14:55 2020
+
+
+Writing checkpoint, step 34257400 at Fri Jul  3 21:29:55 2020
+
+
+Writing checkpoint, step 34458300 at Fri Jul  3 21:44:55 2020
+
+
+           Step           Time
+       34500000    69000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42991e+04    9.15090e+03    5.75533e+02    9.07597e+03    1.30046e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56990e+05   -1.08810e+05   -2.15782e+06    1.17618e+04    1.49886e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83458e+06    3.07164e+05   -1.52742e+06   -6.07260e+06    2.99323e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54225e+03    6.35620e+01    2.65994e-05
+
+Writing checkpoint, step 34658800 at Fri Jul  3 21:59:55 2020
+
+
+Writing checkpoint, step 34859500 at Fri Jul  3 22:14:55 2020
+
+
+           Step           Time
+       35000000    70000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42177e+04    9.03301e+03    5.65038e+02    8.85838e+03    1.29852e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57056e+05   -1.08887e+05   -2.16021e+06    1.18954e+04    1.54943e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83746e+06    3.07023e+05   -1.53044e+06   -6.13906e+06    2.99185e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54445e+03   -1.34511e+02    2.81799e-05
+
+Writing checkpoint, step 35054000 at Fri Jul  3 22:29:55 2020
+
+
+Writing checkpoint, step 35238600 at Fri Jul  3 22:44:55 2020
+
+
+Writing checkpoint, step 35434700 at Fri Jul  3 22:59:55 2020
+
+
+           Step           Time
+       35500000    71000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41211e+04    8.99579e+03    5.37455e+02    9.07344e+03    1.30119e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57391e+05   -1.08753e+05   -2.15995e+06    1.17562e+04    1.74350e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83654e+06    3.07974e+05   -1.52856e+06   -6.20511e+06    3.00112e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54063e+03    6.19421e+00    2.71823e-05
+
+Writing checkpoint, step 35636100 at Fri Jul  3 23:14:55 2020
+
+
+Writing checkpoint, step 35837200 at Fri Jul  3 23:29:55 2020
+
+
+           Step           Time
+       36000000    72000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.39609e+04    8.92914e+03    5.95808e+02    9.14362e+03    1.30065e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56220e+05   -1.08919e+05   -2.15988e+06    1.15793e+04    1.64629e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83814e+06    3.09198e+05   -1.52894e+06   -6.27153e+06    3.01305e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54534e+03   -4.12288e+01    2.59710e-05
+
+Writing checkpoint, step 36023800 at Fri Jul  3 23:44:55 2020
+
+
+Writing checkpoint, step 36227000 at Fri Jul  3 23:59:55 2020
+
+
+Writing checkpoint, step 36427700 at Sat Jul  4 00:14:55 2020
+
+
+           Step           Time
+       36500000    73000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.39791e+04    9.06403e+03    5.80391e+02    8.90126e+03    1.29693e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57484e+05   -1.08873e+05   -2.16054e+06    1.18344e+04    1.59010e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83772e+06    3.06737e+05   -1.53098e+06   -6.33787e+06    2.98907e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54403e+03   -5.89131e+01    2.77083e-05
+
+Writing checkpoint, step 36631400 at Sat Jul  4 00:29:55 2020
+
+
+Writing checkpoint, step 36832200 at Sat Jul  4 00:44:55 2020
+
+
+           Step           Time
+       37000000    74000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42134e+04    9.20726e+03    5.25285e+02    9.06243e+03    1.29947e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57261e+05   -1.08926e+05   -2.16006e+06    1.16302e+04    1.47457e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83699e+06    3.07646e+05   -1.52934e+06   -6.40404e+06    2.99792e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54555e+03    4.98573e+01    2.55996e-05
+
+Writing checkpoint, step 37032700 at Sat Jul  4 00:59:55 2020
+
+
+Writing checkpoint, step 37233100 at Sat Jul  4 01:14:55 2020
+
+
+Writing checkpoint, step 37432900 at Sat Jul  4 01:29:55 2020
+
+
+           Step           Time
+       37500000    75000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44563e+04    8.92413e+03    6.00820e+02    8.92960e+03    1.29891e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57689e+05   -1.08849e+05   -2.15924e+06    1.17504e+04    1.50703e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83570e+06    3.08293e+05   -1.52740e+06   -6.47022e+06    3.00423e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54335e+03   -1.63472e+01    2.67789e-05
+
+Writing checkpoint, step 37633700 at Sat Jul  4 01:44:55 2020
+
+
+Writing checkpoint, step 37834300 at Sat Jul  4 01:59:55 2020
+
+
+           Step           Time
+       38000000    76000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41606e+04    9.17026e+03    5.88572e+02    9.15198e+03    1.30509e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56209e+05   -1.08684e+05   -2.15763e+06    1.17373e+04    1.52331e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83463e+06    3.06044e+05   -1.52859e+06   -6.53644e+06    2.98231e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.53868e+03   -9.31482e+00    2.59619e-05
+
+Writing checkpoint, step 38035300 at Sat Jul  4 02:14:55 2020
+
+
+Writing checkpoint, step 38235600 at Sat Jul  4 02:29:55 2020
+
+
+Writing checkpoint, step 38436100 at Sat Jul  4 02:44:55 2020
+
+
+           Step           Time
+       38500000    77000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44177e+04    9.12353e+03    5.60323e+02    8.87190e+03    1.30081e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.54659e+05   -1.08908e+05   -2.15590e+06    1.17382e+04    1.32567e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83522e+06    3.08584e+05   -1.52664e+06   -6.60313e+06    3.00707e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54502e+03   -1.94419e+02    2.80882e-05
+
+Writing checkpoint, step 38635200 at Sat Jul  4 02:59:55 2020
+
+
+Writing checkpoint, step 38837700 at Sat Jul  4 03:14:55 2020
+
+
+           Step           Time
+       39000000    78000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45012e+04    9.08544e+03    5.59679e+02    8.89595e+03    1.29456e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57597e+05   -1.08950e+05   -2.15881e+06    1.17474e+04    1.25241e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83580e+06    3.08246e+05   -1.52755e+06   -6.66943e+06    3.00377e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54623e+03   -2.12610e+00    2.70001e-05
+
+Writing checkpoint, step 39028800 at Sat Jul  4 03:29:55 2020
+
+
+Writing checkpoint, step 39230800 at Sat Jul  4 03:44:55 2020
+
+
+Writing checkpoint, step 39432100 at Sat Jul  4 03:59:55 2020
+
+
+           Step           Time
+       39500000    79000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43649e+04    9.00833e+03    6.12755e+02    8.91613e+03    1.29737e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57784e+05   -1.08794e+05   -2.15876e+06    1.17069e+04    1.70958e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83525e+06    3.07859e+05   -1.52739e+06   -6.73563e+06    3.00000e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54180e+03   -1.28503e+00    2.73711e-05
+
+Writing checkpoint, step 39634000 at Sat Jul  4 04:14:55 2020
+
+
+Writing checkpoint, step 39836500 at Sat Jul  4 04:29:56 2020
+
+
+           Step           Time
+       40000000    80000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.47246e+04    9.05190e+03    5.66542e+02    8.99734e+03    1.30085e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56640e+05   -1.08842e+05   -2.15764e+06    1.17990e+04    1.49674e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83447e+06    3.08225e+05   -1.52625e+06   -6.80187e+06    3.00357e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54317e+03    8.78257e+01    2.62898e-05
+
+Writing checkpoint, step 40036200 at Sat Jul  4 04:44:55 2020
+
+
+Writing checkpoint, step 40236000 at Sat Jul  4 04:59:55 2020
+
+
+Writing checkpoint, step 40437200 at Sat Jul  4 05:14:55 2020
+
+
+           Step           Time
+       40500000    81000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41684e+04    9.18052e+03    5.49045e+02    9.02159e+03    1.29841e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.58102e+05   -1.08758e+05   -2.15956e+06    1.18004e+04    1.48689e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83550e+06    3.08386e+05   -1.52712e+06   -6.86822e+06    3.00514e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54079e+03    8.82932e+01    2.68233e-05
+
+Writing checkpoint, step 40637900 at Sat Jul  4 05:29:55 2020
+
+
+Writing checkpoint, step 40840900 at Sat Jul  4 05:44:55 2020
+
+
+           Step           Time
+       41000000    82000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41542e+04    9.04592e+03    5.84363e+02    8.99284e+03    1.29804e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.58529e+05   -1.08786e+05   -2.16142e+06    1.17790e+04    1.62755e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83715e+06    3.07354e+05   -1.52980e+06   -6.93473e+06    2.99508e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54157e+03    2.06407e+01    2.67583e-05
+
+Writing checkpoint, step 41039600 at Sat Jul  4 05:59:55 2020
+
+
+Writing checkpoint, step 41238800 at Sat Jul  4 06:14:55 2020
+
+
+Writing checkpoint, step 41436200 at Sat Jul  4 06:29:55 2020
+
+
+           Step           Time
+       41500000    83000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46081e+04    8.97610e+03    5.79067e+02    8.98469e+03    1.30037e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57206e+05   -1.08786e+05   -2.15689e+06    1.17071e+04    1.48774e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83343e+06    3.07128e+05   -1.52630e+06   -7.00114e+06    2.99288e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54158e+03    1.01806e+02    2.63427e-05
+
+Writing checkpoint, step 41629900 at Sat Jul  4 06:44:55 2020
+
+
+Writing checkpoint, step 41830800 at Sat Jul  4 06:59:55 2020
+
+
+           Step           Time
+       42000000    84000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46819e+04    8.87267e+03    5.55894e+02    8.99940e+03    1.29764e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57916e+05   -1.08719e+05   -2.15842e+06    1.15890e+04    1.26792e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83463e+06    3.07737e+05   -1.52689e+06   -7.06752e+06    2.99881e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.53967e+03    3.35475e+01    2.73083e-05
+
+Writing checkpoint, step 42031600 at Sat Jul  4 07:14:55 2020
+
+
+Writing checkpoint, step 42230300 at Sat Jul  4 07:29:56 2020
+
+
+Writing checkpoint, step 42431500 at Sat Jul  4 07:44:55 2020
+
+
+           Step           Time
+       42500000    85000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42217e+04    9.06320e+03    6.13357e+02    9.08458e+03    1.30153e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.55831e+05   -1.09037e+05   -2.15770e+06    1.17373e+04    1.22985e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83591e+06    3.08902e+05   -1.52701e+06   -7.13430e+06    3.01017e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54869e+03   -2.57848e+01    2.59788e-05
+
+Writing checkpoint, step 42630400 at Sat Jul  4 07:59:55 2020
+
+
+Writing checkpoint, step 42828900 at Sat Jul  4 08:14:55 2020
+
+
+           Step           Time
+       43000000    86000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.45643e+04    9.04261e+03    6.21037e+02    8.99425e+03    1.29723e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56946e+05   -1.08719e+05   -2.15867e+06    1.17602e+04    2.00767e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83554e+06    3.07420e+05   -1.52812e+06   -7.20006e+06    2.99573e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.53968e+03    1.85847e+01    2.66995e-05
+
+Writing checkpoint, step 43028300 at Sat Jul  4 08:29:56 2020
+
+
+Writing checkpoint, step 43228700 at Sat Jul  4 08:44:55 2020
+
+
+Writing checkpoint, step 43429000 at Sat Jul  4 08:59:55 2020
+
+
+           Step           Time
+       43500000    87000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43956e+04    9.11888e+03    5.93832e+02    8.97315e+03    1.29602e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57146e+05   -1.08854e+05   -2.15825e+06    1.17483e+04    1.76710e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83535e+06    3.07470e+05   -1.52788e+06   -7.26647e+06    2.99621e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54349e+03    8.01292e+01    2.58318e-05
+
+Writing checkpoint, step 43628300 at Sat Jul  4 09:14:55 2020
+
+
+Writing checkpoint, step 43826200 at Sat Jul  4 09:29:55 2020
+
+
+           Step           Time
+       44000000    88000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.40402e+04    9.05956e+03    5.28306e+02    8.99602e+03    1.29853e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.55836e+05   -1.08806e+05   -2.15655e+06    1.16338e+04    1.45721e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83526e+06    3.07104e+05   -1.52816e+06   -7.33277e+06    2.99264e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54213e+03   -1.14067e+01    2.71281e-05
+
+Writing checkpoint, step 44025300 at Sat Jul  4 09:44:55 2020
+
+
+Writing checkpoint, step 44225000 at Sat Jul  4 09:59:55 2020
+
+
+Writing checkpoint, step 44424500 at Sat Jul  4 10:14:56 2020
+
+
+           Step           Time
+       44500000    89000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44269e+04    9.11758e+03    5.49588e+02    8.97581e+03    1.29540e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56203e+05   -1.08811e+05   -2.15847e+06    1.18690e+04    1.57268e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83644e+06    3.06536e+05   -1.52991e+06   -7.39895e+06    2.98711e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54229e+03   -2.43522e+01    2.60000e-05
+
+Writing checkpoint, step 44626000 at Sat Jul  4 10:29:55 2020
+
+
+Writing checkpoint, step 44826500 at Sat Jul  4 10:44:56 2020
+
+
+           Step           Time
+       45000000    90000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44291e+04    9.03338e+03    5.67331e+02    8.96297e+03    1.29591e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.58110e+05   -1.08900e+05   -2.16019e+06    1.17691e+04    1.37823e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83649e+06    3.07567e+05   -1.52892e+06   -7.46530e+06    2.99716e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54480e+03    6.11481e+01    2.66078e-05
+
+Writing checkpoint, step 45018400 at Sat Jul  4 10:59:55 2020
+
+
+Writing checkpoint, step 45219300 at Sat Jul  4 11:14:55 2020
+
+
+Writing checkpoint, step 45417700 at Sat Jul  4 11:29:55 2020
+
+
+           Step           Time
+       45500000    91000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.41690e+04    9.03152e+03    6.02470e+02    9.02356e+03    1.29994e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56182e+05   -1.08868e+05   -2.15685e+06    1.17830e+04    1.51516e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83478e+06    3.08670e+05   -1.52611e+06   -7.53159e+06    3.00790e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54389e+03    4.76257e+00    2.60773e-05
+
+Writing checkpoint, step 45617400 at Sat Jul  4 11:44:55 2020
+
+
+Writing checkpoint, step 45814900 at Sat Jul  4 11:59:55 2020
+
+
+           Step           Time
+       46000000    92000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42514e+04    9.20428e+03    5.11929e+02    9.15795e+03    1.29899e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56266e+05   -1.08953e+05   -2.15843e+06    1.18117e+04    1.16653e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83616e+06    3.08165e+05   -1.52800e+06   -7.59810e+06    3.00299e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54631e+03    4.26417e+01    2.59826e-05
+
+Writing checkpoint, step 46016200 at Sat Jul  4 12:14:55 2020
+
+
+Writing checkpoint, step 46205400 at Sat Jul  4 12:29:55 2020
+
+
+Writing checkpoint, step 46390400 at Sat Jul  4 12:44:55 2020
+
+
+           Step           Time
+       46500000    93000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42822e+04    9.17030e+03    5.58138e+02    9.04129e+03    1.29637e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57397e+05   -1.09007e+05   -2.15888e+06    1.16245e+04    1.55606e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83602e+06    3.05847e+05   -1.53018e+06   -7.66444e+06    2.98040e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54783e+03    5.51855e+01    2.58196e-05
+
+Writing checkpoint, step 46580200 at Sat Jul  4 12:59:55 2020
+
+
+Writing checkpoint, step 46777600 at Sat Jul  4 13:14:55 2020
+
+
+Writing checkpoint, step 46977000 at Sat Jul  4 13:29:55 2020
+
+
+           Step           Time
+       47000000    94000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46132e+04    9.23182e+03    5.54651e+02    8.97934e+03    1.29892e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57070e+05   -1.08935e+05   -2.15844e+06    1.17386e+04    1.61292e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83514e+06    3.08693e+05   -1.52644e+06   -7.73046e+06    3.00813e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54580e+03   -1.62296e+01    2.76468e-05
+
+Writing checkpoint, step 47174700 at Sat Jul  4 13:44:55 2020
+
+
+Writing checkpoint, step 47370600 at Sat Jul  4 13:59:55 2020
+
+
+           Step           Time
+       47500000    95000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43057e+04    9.01203e+03    5.68204e+02    9.05206e+03    1.30165e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57875e+05   -1.08950e+05   -2.16115e+06    1.17203e+04    1.71925e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83723e+06    3.08751e+05   -1.52848e+06   -7.79669e+06    3.00869e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54622e+03    6.03013e+01    2.60905e-05
+
+Writing checkpoint, step 47569900 at Sat Jul  4 14:14:55 2020
+
+
+Writing checkpoint, step 47767000 at Sat Jul  4 14:29:55 2020
+
+
+Writing checkpoint, step 47965100 at Sat Jul  4 14:44:55 2020
+
+
+           Step           Time
+       48000000    96000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.42751e+04    9.02803e+03    5.39924e+02    8.93324e+03    1.29705e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.56362e+05   -1.08878e+05   -2.15739e+06    1.18191e+04    1.49329e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83546e+06    3.08208e+05   -1.52725e+06   -7.86288e+06    3.00340e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54417e+03   -5.18319e+01    2.75768e-05
+
+Writing checkpoint, step 48161200 at Sat Jul  4 14:59:55 2020
+
+
+Writing checkpoint, step 48357800 at Sat Jul  4 15:14:55 2020
+
+
+           Step           Time
+       48500000    97000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.46155e+04    8.89179e+03    5.60347e+02    8.95427e+03    1.29944e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.59530e+05   -1.08895e+05   -2.16378e+06    1.18020e+04    1.44631e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83823e+06    3.08211e+05   -1.53002e+06   -7.92939e+06    3.00343e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54466e+03    2.86719e+01    2.73614e-05
+
+Writing checkpoint, step 48555400 at Sat Jul  4 15:29:55 2020
+
+
+Writing checkpoint, step 48748200 at Sat Jul  4 15:44:55 2020
+
+
+Writing checkpoint, step 48951200 at Sat Jul  4 15:59:55 2020
+
+
+           Step           Time
+       49000000    98000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43846e+04    9.03257e+03    5.94389e+02    8.91644e+03    1.29990e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.58919e+05   -1.08834e+05   -2.16264e+06    1.17358e+04    1.42642e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83776e+06    3.07989e+05   -1.52977e+06   -7.99592e+06    3.00126e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54292e+03    4.49535e+01    2.64677e-05
+
+Writing checkpoint, step 49150100 at Sat Jul  4 16:14:55 2020
+
+
+Writing checkpoint, step 49349300 at Sat Jul  4 16:29:55 2020
+
+
+           Step           Time
+       49500000    99000.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.44535e+04    9.06168e+03    5.92049e+02    9.02933e+03    1.30027e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57659e+05   -1.08990e+05   -2.15793e+06    1.17019e+04    1.65921e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83423e+06    3.08133e+05   -1.52610e+06   -8.06276e+06    3.00268e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54734e+03    2.03163e+01    2.76127e-05
+
+Writing checkpoint, step 49550600 at Sat Jul  4 16:44:55 2020
+
+
+Writing checkpoint, step 49751700 at Sat Jul  4 16:59:55 2020
+
+
+Writing checkpoint, step 49953200 at Sat Jul  4 17:14:55 2020
+
+
+           Step           Time
+       50000000   100000.00000
+
+Writing checkpoint, step 50000000 at Sat Jul  4 17:18:25 2020
+
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43169e+04    9.12301e+03    5.74262e+02    9.00604e+03    1.29691e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.57108e+05   -1.08900e+05   -2.15847e+06    1.17826e+04    1.45714e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.83562e+06    3.07103e+05   -1.52852e+06   -8.12907e+06    2.99263e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -1.54481e+03    4.08572e+01    2.76400e-05
+
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 50000001 steps using 500001 frames
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    1.43201e+04    9.11175e+03    5.75663e+02    8.98129e+03    1.29861e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip. Position Rest.
+    2.48304e+05   -4.84570e+04   -2.13830e+06    1.22206e+04    1.52791e+02
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.76323e+06    3.07853e+05   -1.45538e+06   -4.75566e+06    2.99995e+02
+ Pres. DC (bar) Pressure (bar)   Constr. rmsd
+   -6.79290e+02    9.65375e-01    0.00000e+00
+
+          Box-X          Box-Y          Box-Z
+    1.35637e+01    1.01489e+01    8.83376e+00
+
+   Total Virial (kJ/mol)
+    1.02454e+05    1.06055e+02   -1.51978e+01
+    1.06609e+02    1.02651e+05    2.91002e+01
+   -1.50448e+01    2.87609e+01    1.02642e+05
+
+   Pressure (bar)
+    1.18899e+00   -1.27462e+00    1.56716e-01
+   -1.29002e+00    1.06612e+00   -9.51100e-01
+    1.52462e-01   -9.41819e-01    6.41019e-01
+
+      T-Protein  T-non-Protein
+    2.99899e+02    2.99998e+02
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ Pair Search distance check         2091709.222448    18825383.002     0.0
+ NxN Ewald Elec. + LJ [F]         2152852320.725568 142088253167.887    98.1
+ NxN Ewald Elec. + LJ [V&F]        21746106.792384  2326833426.785     1.6
+ 1,4 nonbonded interactions          304778.875122    27430098.761     0.0
+ Shift-X                              21691.116000      130146.696     0.0
+ Angles                              208235.653335    34983589.760     0.0
+ Propers                             328268.067957    75173387.562     0.1
+ Impropers                            15835.410900     3293765.467     0.0
+ Pos. Restr.                           1055.694060       52784.703     0.0
+ Virial                              216989.227575     3905806.096     0.0
+ Stop-CM                              21691.116000      216911.160     0.0
+ P-Coupling                          216910.050480     1301460.303     0.0
+ Calc-Ekin                           433820.100960    11713142.726     0.0
+ Lincs                               113803.819668     6828229.180     0.0
+ Lincs-Mat                          2498827.840020     9995311.360     0.0
+ Constraint-V                       2277818.288559    18222546.308     0.0
+ Constraint-Vir                      216401.557581     5193637.382     0.0
+ Settle                              683403.549741   220739346.566     0.2
+-----------------------------------------------------------------------------
+ Total                                             144853092141.706   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank, each using 20 OpenMP threads
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1   20     175950    1603.298      76915.029   2.0
+ Launch GPU ops.        1   20   17594901    2945.588     141308.699   3.7
+ Force                  1   20   17594901   10093.064     484194.563  12.6
+ Wait PME GPU gather    1   20   17594901    6460.012     309906.135   8.0
+ Reduce GPU PME F       1   20   17594901    3663.077     175728.769   4.6
+ Wait GPU NB local                           7020.068     336773.687   8.7
+ NB X/F buffer ops.     1   20   35013852    7409.055     355434.576   9.2
+ Write traj.            1   20        441      13.702        657.343   0.0
+ Update                 1   20   17594901    6146.414     294861.914   7.7
+ Constraints            1   20   17594901   20600.550     988270.171  25.7
+ Rest                                       14355.588     688680.583  17.9
+-----------------------------------------------------------------------------
+ Total                                      80310.416    3852731.468 100.0
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:  1606208.323    80310.416     2000.0
+                         22h18:30
+                 (ns/day)    (hour/ns)
+Performance:       37.858        0.634
+Finished mdrun on rank 0 Sat Jul  4 17:18:25 2020
+
