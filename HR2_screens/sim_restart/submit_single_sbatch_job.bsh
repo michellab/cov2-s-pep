@@ -1,0 +1,3 @@
+
+#!/bin/bash
+for sim  in *prod ; do cd $sim ; sbatch single_job.bsh ; cd - ; done

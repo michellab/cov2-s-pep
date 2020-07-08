@@ -1,0 +1,11 @@
+#!/bin/bash
+ 
+
+gpu_id=$1
+pinoffset=$(( 3*gpu_id ))
+
+
+gmx  mdrun  -s md.tpr -nice 0 -c md.gro  -gpu_id $gpu_id, -nt 3  -ntmpi 1 -pin on -pinoffset  $pinoffset -pinstride 1  -append -cpi state.cpt;
+ 
+
+
